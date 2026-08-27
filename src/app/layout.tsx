@@ -39,7 +39,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sandhyāvandanam — the thrice-daily prayer, explained",
+  title: "Sandhyāvandanam: the thrice-daily prayer, explained",
   description:
     "The Nitya Sandhyāvandanam presented as an explained text: script, literal meaning, inner meaning, and the hand gestures that accompany it, in Devanagari or Tamil.",
 };

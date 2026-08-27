@@ -462,9 +462,13 @@ Guidance:
 - **Section nav** — a slim table of contents (the 13 steps in §4, grouped by
   sandhyā) that scroll-links into the page; sticky only if it doesn't crowd
   the reading column.
-- **Citation footer** — every mantra block ends in a small `label`-styled
-  citation/source line. This is not optional decoration; it's the site's
-  credibility for liturgical accuracy.
+- **Citation data** (kept out of the reading UI, by maintainer decision) —
+  every mantra and gesture entry still carries a `citation` field naming
+  its source and page number in the content files; §2's sourcing policy
+  and status still apply in full. It's deliberately not rendered on the
+  page itself, so the reading surface stays uncluttered — the credibility
+  claim lives in the repo (`CLAUDE.md`, `src/content/*.ts`), not in a line
+  under every mantra.
 - **Glossary tooltip** (implemented) — an unfamiliar term (gotra, pravara,
   arghya, japa, mudrā, …) in the inner-meaning prose is click-to-reveal
   rather than hover-only, so it works the same on touch and desktop; only

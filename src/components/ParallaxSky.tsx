@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform, useReducedMotion, MotionValue } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion, useScroll, useTransform, useMotionValueEvent, useReducedMotion, AnimatePresence, MotionValue } from "framer-motion";
 import { sandhyaMeta, sandhyaOrder } from "@/content/sandhyas";
 import { ScriptText } from "./ScriptText";
 import type { SandhyaTime } from "@/content/types";
@@ -12,20 +12,14 @@ import type { SandhyaTime } from "@/content/types";
  * because it's part of the subject matter, not borrowed marketing-site
  * spectacle: slow, low-amplitude, no scroll-jacking. Pinned for the length
  * of three viewport heights while a gradient, sun disc, and temple
- * silhouette move at different rates; each sandhyā's title crossfades in
- * over its own third of that scroll range. Falls back to three static,
+ * silhouette move at different rates; each sandhyā's title fades in and out
+ * as its own third of that scroll range becomes active — exactly one at a
+ * time, never two overlapping, driven by a single discrete index rather
+ * than independent per-title opacity curves. Falls back to three static,
  * flat-colored bands under prefers-reduced-motion.
  */
 
 const BANDS = sandhyaOrder.length;
-
-function thirds(index: number): [number, number, number, number] {
-  const span = 1 / BANDS;
-  const start = index * span;
-  const end = start + span;
-  const pad = span * 0.12;
-  return [start, start + pad, end - pad, end];
-}
 
 export function ParallaxSky() {
   const reduceMotion = useReducedMotion();
@@ -48,6 +42,16 @@ export function ParallaxSky() {
   const sunGlow = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0.55, 0.9, 0.9, 0.5]);
   const silhouetteY = useTransform(scrollYProgress, [0, 1], [0, -56]);
   const silhouetteOpacity = useTransform(scrollYProgress, [0, 0.62, 1], [0.28, 0.22, 0.4]);
+
+  // Which sandhyā's title is showing — a single discrete value rather than
+  // three independent scroll-linked opacities, so two titles can never be
+  // partially visible at once (that showed up as overlapping, unreadable
+  // text at the band boundaries).
+  const [activeIndex, setActiveIndex] = useState(0);
+  useMotionValueEvent(scrollYProgress, "change", (v) => {
+    const idx = Math.min(BANDS - 1, Math.max(0, Math.floor(v * BANDS)));
+    setActiveIndex(idx);
+  });
 
   if (reduceMotion) {
     return (
@@ -78,16 +82,9 @@ export function ParallaxSky() {
             opacity: sunGlow,
           }}
         />
-        {sandhyaOrder.map((time, i) => (
-          <SandhyaTitle
-            key={time}
-            time={time}
-            range={thirds(i)}
-            progress={scrollYProgress}
-            color={textColor}
-            isFirst={i === 0}
-          />
-        ))}
+        <AnimatePresence mode="wait">
+          <SandhyaTitle key={sandhyaOrder[activeIndex]} time={sandhyaOrder[activeIndex]} color={textColor} />
+        </AnimatePresence>
         <p className="absolute bottom-6 font-ui text-xs tracking-wide text-muted-ink opacity-70">
           scroll to follow the sun
         </p>
@@ -96,28 +93,16 @@ export function ParallaxSky() {
   );
 }
 
-function SandhyaTitle({
-  time,
-  range,
-  progress,
-  color,
-  isFirst = false,
-}: {
-  time: SandhyaTime;
-  range: [number, number, number, number];
-  progress: MotionValue<number>;
-  color: MotionValue<string>;
-  isFirst?: boolean;
-}) {
+function SandhyaTitle({ time, color }: { time: SandhyaTime; color: MotionValue<string> }) {
   const meta = sandhyaMeta[time];
-  // The first band is visible immediately on load rather than fading in —
-  // nothing has scrolled yet, so there's no motion to announce.
-  const opacity = useTransform(progress, range, isFirst ? [1, 1, 1, 0] : [0, 1, 1, 0]);
-  const y = useTransform(progress, range, isFirst ? [0, 0, 0, -18] : [18, 0, 0, -18]);
 
   return (
     <motion.div
-      style={{ opacity, y, color }}
+      initial={{ opacity: 0, y: 14 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -14 }}
+      transition={{ duration: 0.35, ease: "easeOut" }}
+      style={{ color }}
       className="pointer-events-none absolute inset-x-0 top-1/2 mx-auto max-w-xl -translate-y-1/2 px-6 text-center"
     >
       <p className="font-ui text-xs uppercase tracking-[0.2em] opacity-80">{meta.window}</p>

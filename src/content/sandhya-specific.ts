@@ -44,14 +44,14 @@ const gayatriSankalpamTime: Record<SandhyaTime, { dn: string; tm: string; iast: 
 };
 
 /**
- * The resolve is spoken twice — once opening Pūrvāṅgam (naming the
- * sandhyā), once opening the Gāyatrī japa proper (naming the repetition
- * count) — rendered here as one step with two mantra entries rather than
- * two separate step blocks; see CLAUDE.md §4.
+ * The resolve is spoken twice, once opening Pūrvāṅgam (naming the sandhyā)
+ * and once opening the Gāyatrī japa proper (naming the repetition count),
+ * rendered here as one step with two mantra entries rather than two
+ * separate step blocks; see CLAUDE.md §4.
  *
- * Two independent sources agree on the wording but differ on one word:
- * one names "śrīmannārāyaṇa" as the one to whom merit accrues, the other
- * "śrīparameśvara" — a real Vaiṣṇava/Smārta phrasing difference, not an
+ * Two independent sources agree on the wording but differ on one word: one
+ * names "śrīmannārāyaṇa" as the one to whom merit accrues, the other
+ * "śrīparameśvara", a real Vaiṣṇava/Smārta phrasing difference, not an
  * error in either source. Shown here with "parameśvara" per the more
  * commonly attested form; the variant is worth surfacing, not silently
  * resolved.
@@ -68,7 +68,7 @@ export function sankalpam(time: SandhyaTime): RitualStep {
       iast: "saṅkalpam",
       english: "The formal resolve",
     },
-    summary: "A spoken declaration of intent, held with the right palm covering the left on the right thigh — spoken twice: once naming the sandhyā, once naming how many Gāyatrī repetitions are about to follow.",
+    summary: "A spoken declaration of intent, held with the right palm covering the left on the right thigh. It is spoken twice: once naming the sandhyā, once naming how many Gāyatrī repetitions are about to follow.",
     mantras: [
       {
         id: `sankalpam-${time}`,
@@ -77,7 +77,7 @@ export function sankalpam(time: SandhyaTime): RitualStep {
         iast: `oṃ mamopātta samasta duritakṣayadvārā śrī-parameśvara-prītyarthaṃ ${t.iast}`,
         englishMeaning: `By the destruction of all sins that have accrued in me, to be worthy of the grace of the Supreme Lord: ${t.window}.`,
         innerMeaning:
-          `This is the one point in the rite that is inherently time-stamped: the practitioner names which of the three sandhyās — here, the ${t.english} sandhyā — is about to follow. Nothing before this step has been occasion-specific; the Saṅkalpam is where the general procedure becomes a single, particular, spoken act.`,
+          `This is the one moment in the whole rite that is stamped with a particular day and hour. Before it, every step could belong to any morning, noon, or evening: this is the general shape of the practice itself, repeatable and interchangeable. Here, for one sentence, that changes. The practitioner names which of the three sandhyās is beginning, here the ${t.english} sandhyā, and does so by first naming the sins that have accrued and asking for their destruction, so as to become worthy of grace. What happens is a kind of dating stamp: the general procedure becomes, for a moment, one particular, dated act, spoken by one particular person choosing to stop and turn toward the sky.`,
         citation: doubleVerified(16, 6),
       },
       {
@@ -87,7 +87,7 @@ export function sankalpam(time: SandhyaTime): RitualStep {
         iast: `oṃ mamopātta samasta duritakṣayadvārā śrī-parameśvara-prītyarthaṃ ${g.iast}`,
         englishMeaning: "By the destruction of all sins that have accrued in me, to be worthy of the grace of the Supreme Lord: I shall now do the japa of the great Gāyatrī mantra.",
         innerMeaning:
-          "A second, narrower resolve opens Uttarāṅgam specifically — the same opening formula, now naming the act of japa itself rather than the sandhyā as a whole. (In practice a repetition count — 108, or 54/28 where time is short — is often named here too; omitted from the fixed text above since it varies by practitioner and occasion.)",
+          "A second, narrower resolve opens Uttarāṅgam specifically, the same opening formula, now naming the act of japa itself rather than the sandhyā as a whole. Where the first Saṅkalpam named an entire sandhyā, this one names something far more specific: the exact number of times the Gāyatrī mantra is about to be repeated (108, or 54 or 28 where time is short, depending on the practitioner and occasion). Nothing about japa is left vague here. A number is committed to out loud before the counting even begins.",
         citation: doubleVerified(19, 6),
       },
     ],
@@ -103,27 +103,27 @@ const prashanamTime: Record<
     tm: "ௐ ஸூர்யஶ்ச மா மந்யுஶ்ச மந்யுபதயஶ்ச மந்யுக்ருதேப்யஃ । பாபேப்யோ ரக்ஷந்தாம் । யத்ராத்ர்யா பாபமகார்ஷம் । மநஸா வாசா ஹஸ்தாப்யாம் । பத்ப்யாமுதரேண ஶிஶ்நா । ராத்ரிஸ்ததவலும்பது । யத்கிஞ்ச துரிதம் மயி । இதமஹம் மாமம்ருதயோநௌ । ஸூர்யே ஜ்யோதிஷி ஜுஹோமி ஸ்வாஹா ॥",
     iast: "oṃ sūryaśca mā manyuśca manyupatayaśca manyukṛtebhyaḥ, pāpebhyo rakṣantām, yadrātryā pāpamakārṣam, manasā vācā hastābhyām, padbhyāmudareṇa śiśnā, rātristadavalumpatu, yatkiñca duritaṃ mayi, idamahaṃ māmamṛtayonau, sūrye jyotiṣi juhomi svāhā",
     english:
-      "May the Sun, and Anger, and the lords of Anger, protect me from the sins born of anger. Whatever sin I have committed at night — by mind, speech, hands, feet, belly, or organ — may the deity of night remove it from me. Whatever wrong is in me, I offer myself, purified, into the immortal source — I make this offering into the light that is the Sun. Svāhā.",
+      "May the Sun, and Anger, and the lords of Anger, protect me from the sins born of anger. Whatever sin I have committed at night, by mind, speech, hands, feet, belly, or organ, may the deity of night remove it from me. Whatever wrong is in me, I offer myself, purified, into the immortal source: I make this offering into the light that is the Sun. Svāhā.",
     inner:
-      "A distinct sipping purification, with its own verse for each time of day: this one names the night just past and the sun now rising, asking the day's first light to carry off what the dark hours left behind.",
+      "This is a distinct kind of purification from the sprinkling either side of it: not water applied to the outside of the body but a full palmful sipped and taken in. The morning verse names anger and its lord directly and asks the sun to protect against whatever sins were committed in anger through the night, by mind, by speech, by hand, by foot, by appetite. Nothing here is softened or made abstract. What happens is a naming of specific faculties, one at a time, each asked to be cleared before the day's arghya is offered.",
   },
   madhyahnika: {
     dn: "ॐ आपः पुनन्तु पृथिवीं पृथिवी पूता पुनातु माम् । पुनन्तु ब्रह्मणस्पतिर्ब्रह्म पूता पुनातु माम् । यदुच्छिष्टमभोज्यं यद्वा दुश्चरितं मम । सर्वं पुनन्तु मामापोऽसतां च प्रतिग्रहꣳ स्वाहा ॥",
     tm: "ௐ ஆபஃ புநந்து ப்ருதிவீம் ப்ருதிவீ பூதா புநாது மாம் । புநந்து ப்ரஹ்மணஸ்பதிர்ப்ரஹ்ம பூதா புநாது மாம் । யதுச்சிஷ்டமபோஜ்யம் யத்வா துஶ்சரிதம் மம । ஸர்வம் புநந்து மாமாபோஅஸதாம் ச ப்ரதிக்ரஹம் ஸ்வாஹா ॥",
     iast: "oṃ āpaḥ punantu pṛthivīṃ pṛthivī pūtā punātu mām, punantu brahmaṇaspatirbrahma pūtā punātu mām, yaducchiṣṭamabhojyaṃ yadvā duścaritaṃ mama, sarvaṃ punantu māmāpo'satāṃ ca pratigrahaṃ svāhā",
     english:
-      "May the waters purify the earth; may the purified earth purify me. May Brahmaṇaspati purify the ever-pure Veda; may that purify me. Whatever forbidden remnant I have eaten, whatever I have done wrong, whatever I have accepted from the unworthy — may the waters purify me of all of it. Svāhā.",
+      "May the waters purify the earth; may the purified earth purify me. May Brahmaṇaspati purify the ever-pure Veda; may that purify me. Whatever forbidden remnant I have eaten, whatever I have done wrong, whatever I have accepted from the unworthy, may the waters purify me of all of it. Svāhā.",
     inner:
-      "At noon the request turns from night's residue to the day's own accumulations — food eaten carelessly, wrongs done, gifts taken from those one shouldn't have taken from — asked to be cleared by the same waters that first purified the earth itself.",
+      "At noon the sipped water turns from night's residue to the day's own accumulations: food eaten carelessly, wrong done since waking, gifts accepted from those one should not have accepted from. The verse asks the same waters that purify the earth itself to purify the one drinking them, and asks the ever pure Veda, through one's own teacher, to do the same. What happens at this hour is a midday accounting, smaller in scale than the morning or evening confession but no less specific about what it names.",
   },
   sayam: {
     dn: "ॐ अग्निश्च मा मन्युश्च मन्युपतयश्च मन्युकृतेभ्यः । पापेभ्यो रक्षन्ताम् । यदह्ना पापमकार्षम् । मनसा वाचा हस्ताभ्याम् । पद्भ्यामुदरेण शिश्ना । अहस्तदवलुम्पतु । यत्किञ्च दुरितं मयि । इदमहं माममृतयोनौ । सत्ये ज्योतिषि जुहोमि स्वाहा ॥",
     tm: "ௐ அக்நிஶ்ச மா மந்யுஶ்ச மந்யுபதயஶ்ச மந்யுக்ருதேப்யஃ । பாபேப்யோ ரக்ஷந்தாம் । யதஹ்நா பாபமகார்ஷம் । மநஸா வாசா ஹஸ்தாப்யாம் । பத்ப்யாமுதரேண ஶிஶ்நா । அஹஸ்ததவலும்பது । யத்கிஞ்ச துரிதம் மயி । இதமஹம் மாமம்ருதயோநௌ । ஸத்யே ஜ்யோதிஷி ஜுஹோமி ஸ்வாஹா ॥",
     iast: "oṃ agniśca mā manyuśca manyupatayaśca manyukṛtebhyaḥ, pāpebhyo rakṣantām, yadahnā pāpamakārṣam, manasā vācā hastābhyām, padbhyāmudareṇa śiśnā, ahastadavalumpatu, yatkiñca duritaṃ mayi, idamahaṃ māmamṛtayonau, satye jyotiṣi juhomi svāhā",
     english:
-      "May Agni, and Anger, and the lords of Anger, protect me from the sins born of anger. Whatever sin I have committed by day — by mind, speech, hands, feet, belly, or organ — may the deity of day remove it from me. I offer myself, purified, into the light that is truth itself. Svāhā.",
+      "May Agni, and Anger, and the lords of Anger, protect me from the sins born of anger. Whatever sin I have committed by day, by mind, speech, hands, feet, belly, or organ, may the deity of day remove it from me. I offer myself, purified, into the light that is truth itself. Svāhā.",
     inner:
-      "The evening form mirrors the morning one almost word for word — night's guardian and the sun traded for day's guardian (Agni) and \"the light that is truth\" — closing the day's accounts the same way its opening was closed, sins named and released rather than carried forward.",
+      "The evening form mirrors the morning one almost word for word, night's guardian traded for day's guardian, Agni standing where the sun stood at dawn. What happens here closes the day's ledger the way the morning opened it: sins named plainly, by faculty, and released rather than carried into sleep.",
   },
 };
 
@@ -138,7 +138,7 @@ export function prashanam(time: SandhyaTime): RitualStep {
       iast: "prāśanam",
       english: "Sipping purification",
     },
-    summary: "A full palmful of water is sipped while reciting a verse specific to this sandhyā — a distinct purification from the sprinkling either side of it.",
+    summary: "A full palmful of water is sipped while reciting a verse specific to this sandhyā, a distinct purification from the sprinkling on either side of it.",
     mantras: [
       {
         id: `prashanam-${time}`,
@@ -170,7 +170,7 @@ export function arghyapradanam(time: SandhyaTime): RitualStep {
       iast: "arghyapradānam",
       english: "Offering water to Sūrya",
     },
-    summary: `Water offered through joined, cupped palms toward ${moment} while reciting the Gāyatrī mantra — ${posture} — followed by a fourth "apology" arghya asking pardon for any delay.`,
+    summary: `Water is offered through joined, cupped palms toward ${moment} while reciting the Gāyatrī mantra, ${posture}, followed by a fourth "apology" arghya asking pardon for any delay.`,
     mantras: [
       {
         id: `arghyapradanam-${time}`,
@@ -179,7 +179,7 @@ export function arghyapradanam(time: SandhyaTime): RitualStep {
         iast: "oṃ bhūrbhuvaḥ svaḥ, tatsaviturvareṇyaṃ bhargo devasya dhīmahi dhiyo yo naḥ pracodayāt",
         englishMeaning:
           "Om, earth, atmosphere, heaven. Let us meditate on the excellent glory of the divine Savitr; may he direct our understanding.",
-        innerMeaning: `The same Gāyatrī mantra recited for japa is offered here again while water runs from tilted, cupped palms toward the sun, heels raised off the ground. What changes without question by time of day is the count and posture — ${posture} — and what the water is offered to: ${moment}.`,
+        innerMeaning: `The same Gāyatrī mantra recited for japa returns here, spoken aloud with real sound rather than silently, while water runs from tilted, cupped palms toward the sun, heels lifted off the ground. One source explains the meaning this way: Āditya presides over the vitality of every living soul, bright and light by nature, and the arghya cultivates that same quality already present, dormant, within the one offering it: lustre, clear intellect, memory, intuition. The water thrown skyward is described in the same source as aimed at the demons who would otherwise cloud the sun both outside and within, and it notes that the word for those demons, mandeha, can also be read as mama deha, my own body, so what is being driven off reads as inner darkness as much as anything external. What changes without question by time of day is the count and the posture, ${posture}, and what the water is offered to: ${moment}.`,
         gestures: ["arghya-pradana-posture"],
         citation: doubleVerified(24, 15),
       },
@@ -192,9 +192,9 @@ export function arghyapradanam(time: SandhyaTime): RitualStep {
         iast:
           "oṃ bhūḥ, oṃ bhuvaḥ, oṃ suvaḥ, oṃ mahaḥ, oṃ janaḥ, oṃ tapaḥ, oṃ satyam, oṃ tatsaviturvareṇyaṃ bhargo devasya dhīmahi dhiyo yo naḥ pracodayāt, oṃ bhūḥ, oṃ bhuvaḥ, oṃ suvaḥ, oṃ mahaḥ, oṃ janaḥ, oṃ tapaḥ, oṃ satyam",
         englishMeaning:
-          "The seven worlds, the Gāyatrī mantra, and the seven worlds again — offered once, as a fourth arghya.",
+          "The seven worlds, the Gāyatrī mantra, and the seven worlds again, offered once, as a fourth arghya.",
         innerMeaning:
-          "A single extra arghya, offered once regardless of how many the main offering used, explicitly framed as an apology (prāyaścitta) for any delay in beginning the rite at its proper time — an acknowledgment built into the procedure itself, rather than left for the practitioner to feel guilty about silently.",
+          "A single extra offering, given once regardless of how many arghyas came before it, exists for one purpose only: to apologise for beginning the rite later than its proper hour. What happens here is small but telling. The tradition does not expect perfect timing from every practitioner every day. It simply asks that the lapse be named and offered rather than quietly ignored.",
         citation: doubleVerified(25, 15),
       },
     ],
@@ -213,7 +213,7 @@ const suryaContent: Record<
     english:
       "Mitra, sustainer of peoples, holds a glory both true and most radiant, granted by the gods. Mitra guides the peoples, knowing them; Mitra upholds the earth and the sky. Mitra watches over all who dwell here, unblinking; let us offer him, the true one, an oblation rich as ghee.",
     inner:
-      "Recited as the risen sun stands as witness, this Rigvedic hymn (3.59.1–2) addresses Mitra — a solar deity of covenant and daylight — as the one who watches without blinking. The sun here is invoked less as a source of heat than as an unsleeping witness to whatever the day is about to hold.",
+      "Recited as the newly risen sun stands as witness to whatever the day is about to hold, this Rigvedic hymn (3.59.1 to 2) addresses Mitra, a deity of daylight and of covenants kept, as the one who watches every creature without ever blinking. The sun here is invoked less for its heat than for its attention. What happens at this moment is less a request than a registering: the day's actions are about to be observed by something that does not look away, and the practitioner says so aloud before the day properly begins.",
   },
   madhyahnika: {
     dn: "आ सत्येन रजसा वर्तमानो निवेशयन्नमृतं मर्त्यं च । हिरण्ययेन सविता रथेनाऽऽदेवो याति भुवना विपश्यन् ॥ उद्वयं तमसस्परि पश्यन्तो ज्योतिरुत्तरम् । देवं देवत्रा सूर्यमगन्म ज्योतिरुत्तमम् ॥ उदुत्यं जातवेदसं देवं वहन्ति केतवः । दृशे विश्वाय सूर्यम् ॥ चित्रं देवानामुदगादनीकं चक्षुर्मित्रस्य वरुणस्याग्नेः । आ प्रा द्यावापृथिवी अन्तरिक्षꣳ सूर्य आत्मा जगतस्तस्थुषश्च ॥ तच्चक्षुर्देवहितं पुरस्ताच्छुक्रमुच्चरत् । पश्येम शरदः शतं जीवेम शरदः शतम् ॥",
@@ -221,9 +221,9 @@ const suryaContent: Record<
     iast:
       "ā satyena rajasā vartamāno niveśayannamṛtaṃ martyaṃ ca, hiraṇyayena savitā rathenā(ā)devo yāti bhuvanā vipaśyan, udvayaṃ tamasaspari paśyanto jyotiruttaram, devaṃ devatrā sūryamaganma jyotiruttamam, udutyaṃ jātavedasaṃ devaṃ vahanti ketavaḥ, dṛśe viśvāya sūryam, citraṃ devānāmudagādanīkaṃ cakṣurmitrasya varuṇasyāgneḥ, ā prā dyāvāpṛthivī antarikṣaṃ sūrya ātmā jagatastasthuṣaśca, taccakṣurdevahitaṃ purastācchukramuccarat, paśyema śaradaḥ śataṃ jīvema śaradaḥ śatam",
     english:
-      "Moving by the real, the visible order, setting both the immortal and the mortal in place, the god Savitr travels in his golden chariot, seeing all the worlds. Rising up out of the darkness, seeing the higher light, we have come to Sūrya, a god among gods, the highest light. The rays carry the shining, all-knowing god upward, that all may see the sun. The gods' own bright banner has risen — the eye of Mitra, Varuṇa, and Agni; he has filled sky, earth, and atmosphere — the Sun is the self of all that moves and stands still. May we see a hundred autumns; may we live a hundred autumns.",
+      "Moving by the real, the visible order, setting both the immortal and the mortal in place, the god Savitr travels in his golden chariot, seeing all the worlds. Rising up out of the darkness, seeing the higher light, we have come to Sūrya, a god among gods, the highest light. The rays carry the shining, all-knowing god upward, that all may see the sun. The gods' own bright banner has risen: the eye of Mitra, Varuṇa, and Agni; he has filled sky, earth, and atmosphere. The Sun is the self of all that moves and stands still. May we see a hundred autumns; may we live a hundred autumns.",
     inner:
-      "At the sun's zenith, when it casts almost no shadow, the meditation turns to the sun as the shared \"eye\" of Mitra, Varuṇa, and Agni at once, and as the self animating everything that moves or stands still — rather than a deity of dawn or dusk specifically. It closes with one of the most quoted lines in the Veda: the wish to see, and to live, a hundred autumns.",
+      "At the sun's zenith, when it casts almost no shadow and there is nowhere left to hide from it, the meditation turns unusually expansive. The sun is named the shared eye of three deities at once, Mitra, Varuṇa, and Agni together, and then as the self animating everything that moves and everything that merely stands still. The hymn closes with one of the most repeated lines in the whole Veda, the wish to see, and to live, a hundred autumns: not a request for anything unusual, only for enough ordinary time to keep doing this.",
   },
   sayam: {
     dn: "इमं मे वरुण श्रुधी हवमद्या च मृडय । त्वामवस्युराचके ॥",
@@ -232,7 +232,7 @@ const suryaContent: Record<
     english:
       "Varuna, hear this call of mine; today, be gracious. Seeking your protection, I call upon you.",
     inner:
-      "As the sun departs, the address shifts from Mitra (daylight, covenant) to Varuṇa — traditionally the deity who takes up the night's watch. The prayer at dusk asks for nothing elaborate, just to be heard and to be shown grace: fittingly the smallest, plainest request of the entire rite, offered at the day's smallest, plainest hour. (Both sources agree this hymn continues considerably further in full liturgical use; the opening verse is shown here as representative.)",
+      "As the sun departs, the address changes from Mitra, who kept the day's watch, to Varuṇa, who is traditionally understood to take up the night's. The prayer asks for almost nothing: only to be heard, and to be shown some grace. It is the smallest, plainest request in the entire rite, offered, fittingly, at the day's smallest and plainest hour, the hinge between light and dark rather than a moment that belongs fully to either. Both sources agree this hymn continues considerably further in full liturgical use; the opening verse is shown here as representative.",
   },
 };
 

@@ -1,20 +1,20 @@
 <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
   <title>Añjali mudrā, held at the chest</title>
-  <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <!-- shoulders, face-free -->
-    <path d="M32,54 C40,44 52,40 64,40 C76,40 88,44 96,54" opacity="0.35"/>
-
-    <!-- two palms pressed together at chest height -->
-    <g transform="translate(52,78) rotate(-6)">
-      <path d="M-9,14 C-11,2 -9,-10 -4,-18 C-2,-21 1,-21 3,-18 C4,-16 4,-14 4,-12 L4,16 C4,20 0,22 -3,21 C-6,20 -9,18 -9,14 Z"/>
-      <path d="M-6,-6 C-8,-11 -7,-16 -4,-19"/>
-      <path d="M-1,-10 C-1,-16 0,-20 2,-22"/>
+  <g fill="none" stroke="#2A1E17" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- two palms pressed together, fingers up, at chest height -->
+    <g transform="translate(55,88) scale(0.72)">
+      <rect x="-17" y="-30" width="34" height="28" rx="13"/>
+      <g transform="rotate(-14 -12 -30)"><rect x="-16" y="-56" width="8" height="27" rx="4"/></g>
+      <g transform="rotate(-5 -4 -30)"><rect x="-8" y="-61" width="8" height="32" rx="4"/></g>
+      <g transform="rotate(5 4 -30)"><rect x="0" y="-63" width="8" height="34" rx="4"/></g>
+      <g transform="rotate(14 12 -30)"><rect x="8" y="-59" width="8" height="30" rx="4"/></g>
     </g>
-    <g transform="translate(76,78) scale(-1,1) rotate(-6)">
-      <path d="M-9,14 C-11,2 -9,-10 -4,-18 C-2,-21 1,-21 3,-18 C4,-16 4,-14 4,-12 L4,16 C4,20 0,22 -3,21 C-6,20 -9,18 -9,14 Z"/>
-      <path d="M-6,-6 C-8,-11 -7,-16 -4,-19"/>
-      <path d="M-1,-10 C-1,-16 0,-20 2,-22"/>
+    <g transform="translate(73,88) scale(-0.72,0.72)">
+      <rect x="-17" y="-30" width="34" height="28" rx="13"/>
+      <g transform="rotate(-14 -12 -30)"><rect x="-16" y="-56" width="8" height="27" rx="4"/></g>
+      <g transform="rotate(-5 -4 -30)"><rect x="-8" y="-61" width="8" height="32" rx="4"/></g>
+      <g transform="rotate(5 4 -30)"><rect x="0" y="-63" width="8" height="34" rx="4"/></g>
+      <g transform="rotate(14 12 -30)"><rect x="8" y="-59" width="8" height="30" rx="4"/></g>
     </g>
-    <line x1="64" y1="58" x2="64" y2="96" opacity="0.3"/>
   </g>
 </svg>

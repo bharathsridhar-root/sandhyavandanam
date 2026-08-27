@@ -90,10 +90,6 @@ export function GestureModal({ gesture, onClose }: { gesture: GestureEntry; onCl
           <p className="mt-4 font-ui text-xs uppercase tracking-wide text-muted-ink">Significance</p>
           <p className="font-body text-[0.9375rem] leading-relaxed text-ink-soft">{gesture.significance}</p>
 
-          <p className="mt-4 font-ui text-[0.8125rem] font-medium tracking-wide text-muted-ink">
-            {gesture.citation}
-          </p>
-
           <p className="sr-only">{gesture.alt}</p>
         </motion.div>
     </motion.div>

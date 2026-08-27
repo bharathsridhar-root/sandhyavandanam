@@ -1,25 +1,28 @@
 <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
   <title>Prāṇāyāma hasta</title>
   <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <!-- simple face-free head reference: a vertical centerline for the nose -->
-    <path d="M64,26 C50,26 42,40 42,54 C42,66 50,74 64,76 C78,74 86,66 86,54 C86,40 78,26 64,26 Z" opacity="0.35"/>
-    <line x1="64" y1="40" x2="64" y2="60" opacity="0.35"/>
+    <!-- nose reference line, face-free -->
+    <path d="M64,26 L64,54" opacity="0.3"/>
+    <path d="M60,54 Q64,60 68,54" opacity="0.3"/>
 
-    <!-- right hand raised, thumb and ring/little finger closing nostrils -->
-    <g transform="translate(66,56) rotate(4)">
-      <path d="M-9,0 C-10,-11 -8,-19 -5,-24 C-3,-27 2,-27 4,-24 C8,-19 10,-11 9,0 C9,8 5,13 0,13 C-5,13 -9,8 -9,0 Z"/>
-      <path d="M8,-2 C13,-6 14,-9 12,-13"/>
-      <path d="M-8,-16 C-10,-20 -9,-24 -6,-27"/>
+    <!-- right hand raised beside the nose, thumb and ring finger closing the nostrils -->
+    <g transform="translate(66,58) rotate(4) scale(0.62)">
+      <rect x="-17" y="-30" width="34" height="28" rx="13"/>
+      <g transform="rotate(-14 -12 -30)"><rect x="-16" y="-56" width="8" height="27" rx="4"/></g>
+      <g transform="rotate(-5 -4 -30)"><rect x="-8" y="-61" width="8" height="32" rx="4"/></g>
+      <g transform="rotate(14 12 -30)"><rect x="8" y="-59" width="8" height="30" rx="4"/></g>
+      <g transform="rotate(-42 17 -14)"><rect x="17" y="-19" width="22" height="10" rx="5"/></g>
     </g>
 
-    <!-- left hand resting on left knee -->
-    <g transform="translate(34,104) rotate(-6)">
-      <ellipse cx="0" cy="0" rx="16" ry="9"/>
-      <path d="M-14,-2 C-16,-6 -15,-9 -12,-11"/>
-      <path d="M-6,-6 C-7,-10 -6,-13 -3,-15"/>
-      <path d="M2,-7 C2,-11 3,-14 6,-15"/>
-      <path d="M9,-5 C10,-9 12,-11 15,-12"/>
+    <!-- left hand resting open, palm up, on the left knee -->
+    <g transform="translate(34,102) rotate(90) scale(0.5)">
+      <rect x="-17" y="-30" width="34" height="28" rx="13"/>
+      <g transform="rotate(-14 -12 -30)"><rect x="-16" y="-56" width="8" height="27" rx="4"/></g>
+      <g transform="rotate(-5 -4 -30)"><rect x="-8" y="-61" width="8" height="32" rx="4"/></g>
+      <g transform="rotate(5 4 -30)"><rect x="0" y="-63" width="8" height="34" rx="4"/></g>
+      <g transform="rotate(14 12 -30)"><rect x="8" y="-59" width="8" height="30" rx="4"/></g>
+      <g transform="rotate(-42 17 -14)"><rect x="17" y="-19" width="22" height="10" rx="5"/></g>
     </g>
-    <path d="M20,112 C30,116 44,116 52,110" opacity="0.35"/>
+    <path d="M18,110 C28,116 42,116 52,110" opacity="0.3"/>
   </g>
 </svg>

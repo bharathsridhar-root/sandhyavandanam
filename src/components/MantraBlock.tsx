@@ -9,10 +9,12 @@ import { GlossedText } from "./GlossedText";
 
 /**
  * The core repeating unit of the site — CLAUDE.md §7 Layout: script line →
- * English meaning line → inner-meaning paragraph → citation, in that fixed
- * order every time, with an optional Gesture panel docked beside it (below
- * on mobile). A gentle fade/rise plays once as the block scrolls into view;
- * prefers-reduced-motion drops the vertical movement per CLAUDE.md §7 Motion.
+ * English meaning line → inner-meaning paragraph, in that fixed order every
+ * time, with an optional Gesture panel docked beside it (below on mobile).
+ * Source citations live in the content files and CLAUDE.md rather than in
+ * the reading UI itself, kept out of the way of the text. A gentle
+ * fade/rise plays once as the block scrolls into view; prefers-reduced-motion
+ * drops the vertical movement per CLAUDE.md §7 Motion.
  */
 export function MantraBlock({ mantra }: { mantra: MantraEntry }) {
   const gestures = gesturesById(mantra.gestures);
@@ -41,9 +43,6 @@ export function MantraBlock({ mantra }: { mantra: MantraEntry }) {
         </p>
         <p className="font-body text-[1.0625rem] leading-relaxed text-ink-soft">
           <GlossedText text={mantra.innerMeaning} />
-        </p>
-        <p className="font-ui text-[0.8125rem] font-medium tracking-wide text-muted-ink">
-          {mantra.citation}
         </p>
       </div>
       <GesturePanel gestures={gestures} />

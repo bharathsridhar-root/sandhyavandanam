@@ -2,22 +2,24 @@
   <title>Mārjana mudrā</title>
   <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
     <!-- crown of the head, face-free -->
-    <path d="M40,96 C40,74 50,60 64,60 C78,60 88,74 88,96" opacity="0.35"/>
+    <circle cx="64" cy="96" r="20"/>
 
-    <!-- hand held above the head, fingertips together -->
-    <g transform="translate(64,40) rotate(180)">
-      <path d="M-11,0 C-13,-14 -10,-24 -6,-30 C-3,-34 3,-34 6,-30 C10,-24 13,-14 11,0 C11,10 6,16 0,17 C-6,16 -11,10 -11,0 Z"/>
-      <path d="M-9,-22 C-10,-29 -7,-34 -2,-35"/>
-      <path d="M-3,-28 C-3,-35 -1,-40 3,-41"/>
-      <path d="M3,-28 C4,-34 6,-38 10,-38"/>
-      <path d="M9,-22 C11,-27 14,-30 18,-30"/>
+    <!-- hand held above the head, fingers pointing down toward the crown -->
+    <g transform="translate(64,44) rotate(180) scale(0.68)">
+      <rect x="-17" y="-30" width="34" height="28" rx="13"/>
+      <g transform="rotate(-14 -12 -30)"><rect x="-16" y="-56" width="8" height="27" rx="4"/></g>
+      <g transform="rotate(-5 -4 -30)"><rect x="-8" y="-61" width="8" height="32" rx="4"/></g>
+      <g transform="rotate(5 4 -30)"><rect x="0" y="-63" width="8" height="34" rx="4"/></g>
+      <g transform="rotate(14 12 -30)"><rect x="8" y="-59" width="8" height="30" rx="4"/></g>
     </g>
+  </g>
 
-    <!-- scattered droplets falling toward the crown -->
-    <circle cx="52" cy="58" r="2"/>
-    <circle cx="64" cy="52" r="2.2"/>
-    <circle cx="76" cy="58" r="2"/>
-    <circle cx="58" cy="66" r="1.6"/>
-    <circle cx="70" cy="66" r="1.6"/>
+  <!-- scattered droplets falling toward the crown -->
+  <g fill="#2A1E17" stroke="none">
+    <circle cx="52" cy="66" r="2"/>
+    <circle cx="64" cy="60" r="2.2"/>
+    <circle cx="76" cy="66" r="2"/>
+    <circle cx="58" cy="74" r="1.6"/>
+    <circle cx="70" cy="74" r="1.6"/>
   </g>
 </svg>
