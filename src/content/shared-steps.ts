@@ -1,0 +1,400 @@
+import type { RitualStep } from "./types";
+import { doubleVerified } from "./citation";
+
+/**
+ * Steps that are identical across all three sandhyās (only Saṅkalpam,
+ * Prāśanam, Arghyapradānam, and Sūryopasthānam genuinely differ by time of
+ * day, see sandhya-specific.ts). Reused verbatim by pratah/madhyahnika/sayam
+ * in sandhyas.ts. Ācamanam, Gaṇapati Dhyānam, and Prāṇāyāmam are each
+ * recited three times across the full rite (opening Pūrvāṅgam, opening
+ * Uttarāṅgam, and, Ācamanam only, closing); rather than rendering three
+ * near-identical blocks, each step's summary notes the repetition.
+ *
+ * Citations are still recorded on every entry (see citation.ts) even though
+ * the reading UI no longer displays them; see CLAUDE.md §2 and §7.
+ */
+
+export const achamanam: RitualStep = {
+  id: "achamanam",
+  order: 1,
+  name: {
+    devanagari: "आचमनम्",
+    tamil: "ஆசமனம்",
+    iast: "ācamanam",
+    english: "Sipping water, invoking the names of Viṣṇu",
+  },
+  summary:
+    "Three names are swallowed, then all twelve Keśava names are recited while touching specific points on the hand and body. It is recited three times across the full rite: opening Pūrvāṅgam, opening Uttarāṅgam, and again to close.",
+  mantras: [
+    {
+      id: "achamanam-1",
+      devanagari: "ॐ अच्युताय नमः । ॐ अनन्ताय नमः । ॐ गोविन्दाय नमः ।",
+      tamil: "ௐ அச்யுதாய நமஃ । ௐ அநந்தாய நமஃ । ௐ கோவிந்தாய நமஃ ।",
+      iast: "oṃ acyutāya namaḥ, oṃ anantāya namaḥ, oṃ govindāya namaḥ",
+      englishMeaning: "Om, to Achyuta, salutations. Om, to Ananta, salutations. Om, to Govinda, salutations.",
+      innerMeaning:
+        "Water is swallowed three times, once on each of these three names. An old teaching stands behind this called Nāmatrayavidyā, the science of the three names, said to work on whatever ails the body and mind the way medicine does. Nothing has been asked for yet and nothing explained. The rite simply opens by naming what does not fall (Achyuta), what has no end (Ananta), and the one found wherever the senses reach (Govinda), then lets water carry those three names in. What actually happens is closer to a reset than a request: the mouth about to shape a hundred more syllables is cleared first, so that everything said afterward is said with a clean instrument.",
+      gestures: ["gokarna-mudra"],
+      citation: doubleVerified(13, 1),
+    },
+    {
+      id: "achamanam-2",
+      devanagari:
+        "ॐ केशवाय नमः । ॐ नारायणाय नमः । ॐ माधवाय नमः । ॐ गोविन्दाय नमः । ॐ विष्णवे नमः । ॐ मधुसूदनाय नमः । ॐ त्रिविक्रमाय नमः । ॐ वामनाय नमः । ॐ श्रीधराय नमः । ॐ हृषीकेशाय नमः । ॐ पद्मनाभाय नमः । ॐ दामोदराय नमः ।",
+      tamil:
+        "ௐ கேஶவாய நமஃ । ௐ நாராயணாய நமஃ । ௐ மாதவாய நமஃ । ௐ கோவிந்தாய நமஃ । ௐ விஷ்ணவே நமஃ । ௐ மதுஸூதநாய நமஃ । ௐ த்ரிவிக்ரமாய நமஃ । ௐ வாமநாய நமஃ । ௐ ஶ்ரீதராய நமஃ । ௐ ஹ்ருஷீகேஶாய நமஃ । ௐ பத்மநாபாய நமஃ । ௐ தாமோதராய நமஃ ।",
+      iast:
+        "oṃ keśavāya namaḥ, oṃ nārāyaṇāya namaḥ, oṃ mādhavāya namaḥ, oṃ govindāya namaḥ, oṃ viṣṇave namaḥ, oṃ madhusūdanāya namaḥ, oṃ trivikramāya namaḥ, oṃ vāmanāya namaḥ, oṃ śrīdharāya namaḥ, oṃ hṛṣīkeśāya namaḥ, oṃ padmanābhāya namaḥ, oṃ dāmodarāya namaḥ",
+      englishMeaning:
+        "Salutations to Keshava, Narayana, Madhava, Govinda, Vishnu, Madhusudana, Trivikrama, Vamana, Sridhara, Hrishikesha, Padmanabha, and Damodara.",
+      innerMeaning:
+        "Twelve names now travel from mouth to body: thumb to each cheek, ring finger to each eye, index finger to each nostril, little finger to each ear, middle finger to each shoulder, then all four fingers together to the navel and to the crown of the head. The logic is plain once you notice it. Cheeks, eyes, nostrils, ears, shoulders, navel, head: this is nearly the whole map of the face and upper body, touched in order, each point given its own name rather than left anonymous. What happens here is a kind of inventory. Before the mind is asked to concentrate on anything, the body it will concentrate with is named, point by point, and claimed as fit for the work ahead.",
+      citation: doubleVerified(13, 2),
+    },
+  ],
+};
+
+export const ganapatiDhyanam: RitualStep = {
+  id: "ganapati-dhyanam",
+  order: 2,
+  name: {
+    devanagari: "गणपति ध्यानम्",
+    tamil: "கணபதி த்யானம்",
+    iast: "gaṇapati dhyānam",
+    english: "Meditation on Gaṇapati",
+  },
+  summary:
+    "A short, widely known verse invoking Gaṇapati to clear obstacles before the rite continues. It is recited at the opening of both Pūrvāṅgam and Uttarāṅgam.",
+  mantras: [
+    {
+      id: "ganapati-dhyanam-1",
+      devanagari:
+        "ॐ शुक्लाम्बरधरं विष्णुं शशिवर्णं चतुर्भुजम् । प्रसन्नवदनं ध्यायेत् सर्वविघ्नोपशान्तये ॥",
+      tamil:
+        "ௐ ஶுக்லாம்பரதரம் விஷ்ணும் ஶஶிவர்ணம் சதுர்புஜம் । ப்ரஸந்நவதநம் த்யாயேத் ஸர்வவிக்நோபஶாந்தயே ॥",
+      iast:
+        "oṃ śuklāmbaradharaṃ viṣṇuṃ śaśivarṇaṃ caturbhujam, prasannavadanaṃ dhyāyet sarvavighnopaśāntaye",
+      englishMeaning:
+        "I meditate on the all-pervading one who wears a white garment, is fair as the moon, four-armed, and cheerful of countenance, so that all obstacles may be pacified.",
+      innerMeaning:
+        "Before the breath is steadied or the resolve spoken, whatever might obstruct the rite is addressed first, in a single, almost offhand verse. Ganapati is pictured wearing white, moonlike in colour, four armed, and visibly at ease: prasannavadanam, of cheerful countenance. That detail carries weight. The obstacle clearing deity here is not approached with anxiety or elaborate propitiation. He is simply pictured smiling, and the way is asked to clear itself. What happens in practice is a brief settling, the kind of pause a speaker takes before the first real sentence, except here it faces outward, toward whatever unseen resistance the day might otherwise offer.",
+      citation: doubleVerified(14, 3),
+    },
+  ],
+};
+
+export const pranayamam: RitualStep = {
+  id: "pranayamam",
+  order: 3,
+  name: {
+    devanagari: "प्राणायामम्",
+    tamil: "பிராணாயாமம்",
+    iast: "prāṇāyāmam",
+    english: "Regulated breath",
+  },
+  summary:
+    "The breath is held through a formula naming all seven worlds, the Gāyatrī mantra, and a closing invocation, steadying body and mind before anything else is attempted. It is recited, in some form, several times across the rite.",
+  mantras: [
+    {
+      id: "pranayamam-1",
+      devanagari:
+        "ॐ भूः । ॐ भुवः । ॐ सुवः । ॐ महः । ॐ जनः । ॐ तपः । ॐ सत्यम् । ॐ तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात् । ॐ आपो ज्योती रसोऽमृतं ब्रह्म भूर्भुवस्सुवरोम् ।",
+      tamil:
+        "ௐ பூஃ । ௐ புவஃ । ௐ ஸுவஃ । ௐ மஹஃ । ௐ ஜநஃ । ௐ தபஃ । ௐ ஸத்யம் । ௐ தத்ஸவிதுர்வரேண்யம் பர்கோ தேவஸ்ய தீமஹி தியோ யோ நஃ ப்ரசோதயாத் । ௐ ஆபோ ஜ்யோதீ ரஸோம்ருதம் ப்ரஹ்ம பூர்புவஸ்ஸுவரோம் ।",
+      iast:
+        "oṃ bhūḥ, oṃ bhuvaḥ, oṃ suvaḥ, oṃ mahaḥ, oṃ janaḥ, oṃ tapaḥ, oṃ satyam, oṃ tatsaviturvareṇyaṃ bhargo devasya dhīmahi dhiyo yo naḥ pracodayāt, oṃ āpo jyotī raso'mṛtaṃ brahma bhūrbhuvassuvarom",
+      englishMeaning:
+        "Om, earth. Om, atmosphere. Om, heaven. Om, the world beyond. Om, the world of the born. Om, the world of austerity. Om, the world of truth. Om, let us meditate on the excellent glory of the divine Savitr (the Sun); may he inspire our understanding. Om, water, light, essence, immortal, the absolute: earth, atmosphere, heaven, Om.",
+      innerMeaning:
+        "On a single held breath, seven worlds are named, from the solid earth underfoot to the furthest world of truth, followed by the Gāyatrī mantra folded into miniature and closed with a formula naming water, light, and the immortal essence. Practiced fully it is a timed discipline: inhale while the seven worlds are recited, hold the breath through the Gāyatrī, release it through the closing formula, in a ratio of one part inhalation to three parts retention to two parts exhalation. This tradition takes the physical effect seriously: its own source text describes breath and heart rhythm changing noticeably during practice, and frames the exercise as recharging the body's own vital field, the same field naturopathic and pranic-healing traditions locate at the fingertips and the crown of the head. Whatever one makes of that account, the felt effect is immediate and hard to argue with. The whole of the cosmos is made to fit inside one breath before the mind is asked to hold anything smaller.",
+      gestures: ["pranayama-hasta"],
+      citation: doubleVerified(15, 4),
+    },
+  ],
+};
+
+export const prokshanamMarjanam: RitualStep = {
+  id: "prokshanam-marjanam",
+  order: 5,
+  name: {
+    devanagari: "प्रोक्षणम् / मार्जनम्",
+    tamil: "ப்ரோக்ஷணம் / மார்ஜனம்",
+    iast: "prokṣaṇam / mārjanam",
+    english: "Purificatory sprinkling",
+  },
+  summary:
+    "Nine lines from the Rigveda address the waters directly as nurturing mothers, while water is sprinkled on the head with each line. One line is sprinkled on the feet instead.",
+  mantras: [
+    {
+      id: "prokshanam-marjanam-1",
+      devanagari:
+        "आपो हि ष्ठा मयोभुवः ता न ऊर्जे दधातन । महे रणाय चक्षसे । यो वः शिवतमो रसः तस्य भाजयतेह नः । उशतीरिव मातरः । तस्मा अरं गमाम वो यस्य क्षयाय जिन्वथ । आपो जनयथा च नः । ॐ भूर्भुवस्सुवः ॥",
+      tamil:
+        "ஆபோ ஹி ஷ்டா மயோபுவஃ தா ந ஊர்ஜே ததாதந । மஹே ரணாய சக்ஷஸே । யோ வஃ ஶிவதமோ ரஸஃ தஸ்ய பாஜயதேஹ நஃ । உஶதீரிவ மாதரஃ । தஸ்மா அரம் கமாம வோ யஸ்ய க்ஷயாய ஜிந்வத । ஆபோ ஜநயதா ச நஃ । ௐ பூர்புவஸ்ஸுவஃ ॥",
+      iast:
+        "āpo hi ṣṭhā mayobhuvaḥ tā na ūrje dadhātana, mahe raṇāya cakṣase, yo vaḥ śivatamo rasaḥ tasya bhājayateha naḥ, uśatīriva mātaraḥ, tasmā araṃ gamāma vo yasya kṣayāya jinvatha, āpo janayathā ca naḥ, oṃ bhūrbhuvassuvaḥ",
+      englishMeaning:
+        "Waters, you who are truly beneficial, grant us nourishment and the vision of great delight. Let us share here in that most auspicious essence that is yours, as loving mothers share theirs. May we go readily to that house to which you send us, and, waters, give us new life. Om, earth, atmosphere, heaven.",
+      innerMeaning:
+        "Nine lines address the waters directly, calling them mothers and asking for their most auspicious essence, and water is sprinkled onto the head as each line is spoken. One line asks the waters to quicken us toward the home they lead us to, and for that single line the water goes to the feet instead of the head, following the sense of the words rather than habit. The final line does not sprinkle at all. It circles the water clockwise around the head, closing the gesture the way a hand closes a book. What happens across these nine lines is a shift in register, from washing to asking. The water is not simply applied to the body, it is spoken to first, and only then poured.",
+      gestures: ["marjana-mudra"],
+      citation: doubleVerified(18, 7),
+    },
+  ],
+};
+
+export const punahProkshanam: RitualStep = {
+  id: "punah-prokshanam",
+  order: 7,
+  name: {
+    devanagari: "पुनःप्रोक्षणम्",
+    tamil: "புநஃப்ரோக்ஷணம்",
+    iast: "punaḥ prokṣaṇam",
+    english: "Sprinkling again",
+  },
+  summary:
+    "A second sprinkling. It first invokes Dadhikrāvṇa, identified here with Hayagrīva, seat of knowledge, then repeats the Prokṣaṇam verses in full.",
+  mantras: [
+    {
+      id: "punah-prokshanam-1",
+      devanagari:
+        "ॐ दधिक्राव्णो अकारिषं जिष्णोरश्वस्य वाजिनः । सुरभि नो मुखाकरत् प्रण आयूंषि तारिषत् । आपो हि ष्ठा मयोभुवः ता न ऊर्जे दधातन । महे रणाय चक्षसे । यो वः शिवतमो रसः तस्य भाजयतेह नः । उशतीरिव मातरः । तस्मा अरं गमाम वो यस्य क्षयाय जिन्वथ । आपो जनयथा च नः । ॐ भूर्भुवस्सुवः ॥",
+      tamil:
+        "ௐ ததிக்ராவ்ணோ அகாரிஷம் ஜிஷ்ணோரஶ்வஸ்ய வாஜிநஃ । ஸுரபி நோ முகாகரத் ப்ரண ஆயூம்ஷி தாரிஷத் । ஆபோ ஹி ஷ்டா மயோபுவஃ தா ந ஊர்ஜே ததாதந । மஹே ரணாய சக்ஷஸே । யோ வஃ ஶிவதமோ ரஸஃ தஸ்ய பாஜயதேஹ நஃ । உஶதீரிவ மாதரஃ । தஸ்மா அரம் கமாம வோ யஸ்ய க்ஷயாய ஜிந்வத । ஆபோ ஜநயதா ச நஃ । ௐ பூர்புவஸ்ஸுவஃ ॥",
+      iast:
+        "oṃ dadhikrāvṇo akāriṣaṃ jiṣṇorśvasya vājinaḥ, surabhi no mukhākarat praṇa āyūṃṣi tāriṣat, āpo hi ṣṭhā mayobhuvaḥ...",
+      englishMeaning:
+        "I have praised Dadhikrāvṇa, the victorious, spirited steed. May he make our faces fragrant and lengthen our lives. (Followed by the Prokṣaṇam verses in full.)",
+      innerMeaning:
+        "A second invocation precedes the same purifying verses, repeated in full, this time addressed first to Dadhikrāvṇa, read in this tradition as another name for Hayagrīva, the horse headed form who is the seat of all learning. The closing gesture changes too. Rather than sprinkling once more, the water is circled clockwise around the head, a small flourish that marks this second purification as complete rather than merely repeated. What happens is less about new content and more about emphasis. Whatever the first sprinkling began, this one seals.",
+      citation: doubleVerified(21, 14),
+    },
+  ],
+};
+
+export const sandhyopasanam: RitualStep = {
+  id: "sandhyopasanam",
+  order: 9,
+  name: {
+    devanagari: "सन्ध्योपासनम्",
+    tamil: "ஸந்த்யோபாஸனம்",
+    iast: "sandhyopāsanam",
+    english: "Contemplation of unity",
+  },
+  summary:
+    "Two joined hands rest at the chest, eyes closed, while a brief meditation holds the sun and the self together in mind for a moment, unhurried.",
+  mantras: [
+    {
+      id: "sandhyopasanam-1",
+      devanagari: "ॐ असावादित्यो ब्रह्म । ब्रह्मैवाहमस्मि ॥",
+      tamil: "ௐ அஸாவாதித்யோ ப்ரஹ்ம । ப்ரஹ்மைவாஹமஸ்மி ॥",
+      iast: "oṃ asāvādityo brahma, brahmaivāhamasmi",
+      englishMeaning: "That sun is Brahman. I am indeed that Brahman.",
+      innerMeaning:
+        "Two hands touch the chest, the eyes close, and for one held breath the identity of the visible sun and one's own innermost self is contemplated rather than described: that sun is Brahman, I am that Brahman. Nothing is asked for here, nothing purified. Also called Aikyānusandhānam, contemplation of oneness, in at least one source, what happens in this single line sits close to what the Chandogya Upanishad calls Āditya Vidyā, the teaching that the sun seen outside and the light of awareness inside are, on close examination, not two different things at all. It is the shortest step in the entire rite, and of everything performed, the one least concerned with doing anything.",
+      gestures: ["anjali-mudra-urdhva"],
+      citation: doubleVerified(27, 16),
+    },
+  ],
+};
+
+export const adityadiTarpanam: RitualStep = {
+  id: "adityadi-tarpanam",
+  order: 10,
+  name: {
+    devanagari: "आदित्यादि तर्पणम्",
+    tamil: "ஆதித்யாதி தர்பணம்",
+    iast: "ādityādi tarpaṇam",
+    english: "Offering thanks to the nine planets and twelve names",
+  },
+  summary:
+    "Water is let run from the fingertips to the ground while thanking the nine graha and, once more, the twelve names of Viṣṇu who preside over the twelve months.",
+  mantras: [
+    {
+      id: "adityadi-tarpanam-1",
+      devanagari:
+        "ॐ आदित्यं तर्पयामि । सोमं तर्पयामि । अङ्गारकं तर्पयामि । बुधं तर्पयामि । बृहस्पतिं तर्पयामि । शुक्रं तर्पयामि । शनैश्चरं तर्पयामि । राहुं तर्पयामि । केतुं तर्पयामि ॥ केशवं तर्पयामि । नारायणं तर्पयामि । माधवं तर्पयामि । गोविन्दं तर्पयामि । विष्णुं तर्पयामि । मधुसूदनं तर्पयामि । त्रिविक्रमं तर्पयामि । वामनं तर्पयामि । श्रीधरं तर्पयामि । हृषीकेशं तर्पयामि । पद्मनाभं तर्पयामि । दामोदरं तर्पयामि ॥",
+      tamil:
+        "ௐ ஆதித்யம் தர்பயாமி । ஸோமம் தர்பயாமி । அங்காரகம் தர்பயாமி । புதம் தர்பயாமி । ப்ருஹஸ்பதிம் தர்பயாமி । ஶுக்ரம் தர்பயாமி । ஶநைஶ்சரம் தர்பயாமி । ராஹும் தர்பயாமி । கேதும் தர்பயாமி ॥ கேஶவம் தர்பயாமி । நாராயணம் தர்பயாமி । மாதவம் தர்பயாமி । கோவிந்தம் தர்பயாமி । விஷ்ணும் தர்பயாமி । மதுஸூதநம் தர்பயாமி । த்ரிவிக்ரமம் தர்பயாமி । வாமநம் தர்பயாமி । ஶ்ரீதரம் தர்பயாமி । ஹ்ருஷீகேஶம் தர்பயாமி । பத்மநாபம் தர்பயாமி । தாமோதரம் தர்பயாமி ॥",
+      iast:
+        "oṃ ādityaṃ tarpayāmi, somaṃ tarpayāmi, aṅgārakaṃ tarpayāmi, budhaṃ tarpayāmi, bṛhaspatiṃ tarpayāmi, śukraṃ tarpayāmi, śanaiścaraṃ tarpayāmi, rāhuṃ tarpayāmi, ketuṃ tarpayāmi; keśavaṃ tarpayāmi...dāmodaraṃ tarpayāmi",
+      englishMeaning:
+        "I satisfy the Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn, Rahu, and Ketu. I satisfy Keshava, Narayana, Madhava, Govinda, Vishnu, Madhusudana, Trivikrama, Vamana, Sridhara, Hrishikesha, Padmanabha, and Damodara.",
+      innerMeaning:
+        "The same twelve names touched at Achamanam return here, joined by nine more: the sun, the moon, and the five visible planets known to the tradition, plus Rahu and Ketu, the shadow points where eclipses happen. This time nothing is touched to the body. Water simply runs from the fingertips to the ground, once for each name, and twelve months are said to answer to the twelve names in turn. What happens across this step is a calendar being thanked in miniature, every governing presence of the year given its due before the rite turns toward its center.",
+      citation: doubleVerified(28, 17),
+    },
+  ],
+};
+
+export const gayatriAvahanam: RitualStep = {
+  id: "gayatri-avahanam",
+  order: 13,
+  name: {
+    devanagari: "गायत्री आवाहनम्",
+    tamil: "காயத்ரீ ஆவாஹனம்",
+    iast: "gāyatrī āvāhanam",
+    english: "Invoking the Gāyatrī",
+  },
+  summary: "A verse invites the Gāyatrī, imagined as manifesting in the lotus of the heart, before the mantra itself is taken up.",
+  mantras: [
+    {
+      id: "gayatri-avahanam-1",
+      devanagari:
+        "ॐ आयातु वरदा देवी अक्षरं ब्रह्मसम्मितम् । गायत्रीं छन्दसां मातेदं ब्रह्म जुषस्व नः । ओजोऽसि सहोऽसि बलमसि भ्राजोऽसि देवानां धाम नामासि । विश्वमसि विश्वायुः सर्वमसि सर्वायुरभिभूरोम् । गायत्रीमावाहयामि सावित्रीमावाहयामि सरस्वतीमावाहयामि ॥",
+      tamil:
+        "ௐ ஆயாது வரதா தேவீ அக்ஷரம் ப்ரஹ்மஸம்மிதம் । காயத்ரீம் சந்தஸாம் மாதேதம் ப்ரஹ்ம ஜுஷஸ்வ நஃ । ஓஜோஅஸி ஸஹோஅஸி பலமஸி ப்ராஜோஅஸி தேவாநாம் தாம நாமாஸி । விஶ்வமஸி விஶ்வாயுஃ ஸர்வமஸி ஸர்வாயுரபிபூரோம் । காயத்ரீம் ஆவாஹயாமி ஸாவித்ரீம் ஆவாஹயாமி ஸரஸ்வதீம் ஆவாஹயாமி ॥",
+      iast:
+        "oṃ āyātu varadā devī akṣaraṃ brahmasammitam, gāyatrīṃ chandasāṃ mātedaṃ brahma juṣasva naḥ, ojo'si saho'si balamasi bhrājo'si devānāṃ dhāma nāmāsi, viśvamasi viśvāyuḥ sarvamasi sarvāyurabhibhūrom, gāyatrīm āvāhayāmi sāvitrīm āvāhayāmi sarasvatīm āvāhayāmi",
+      englishMeaning:
+        "Om. May the boon-granting goddess come, the imperishable syllable equal to the absolute. Gāyatrī, mother of the metres, be pleased to accept this offering of ours. You are vigor, you are strength, you are power, you are radiance; you are the abode and the very name of the gods. You are the universe, you are all life; you are everything, you are all life, all-pervading. I invoke Gāyatrī, I invoke Sāvitrī, I invoke Sarasvatī.",
+      innerMeaning:
+        "Before the mantra is recited it is invited, and pictured arriving specifically in the lotus of the heart, not the air outside or the mouth about to speak it. The verse addresses Gāyatrī as a boon granting goddess and names her, in the same breath, as vigor, strength, power, radiance, the very abode and name of the gods, the whole universe and all its life at once. Three forms are called by name at the close: Gāyatrī, Sāvitrī, Sarasvatī, as though one mantra were being asked to arrive wearing three faces. What happens here decides the character of everything that follows. The japa that comes next is framed not as a technical repetition of fixed syllables but as time spent in the company of someone who has just been welcomed in.",
+      gestures: ["anjali-mudra-hridaya"],
+      citation: doubleVerified(35, 20),
+    },
+  ],
+};
+
+export const gayatriJapa: RitualStep = {
+  id: "gayatri-japa",
+  order: 14,
+  name: {
+    devanagari: "गायत्री जपः",
+    tamil: "காயத்ரி ஜபம்",
+    iast: "gāyatrī japaḥ",
+    english: "Repetition of the Gāyatrī mantra",
+  },
+  summary:
+    "The Gāyatrī mantra is repeated: standing and facing the sun for prātaḥ and mādhyāhnika, seated and facing away for sāyam. This is the center of gravity of the entire rite.",
+  mantras: [
+    {
+      id: "gayatri-japa-1",
+      devanagari: "ॐ भूर्भुवः स्वः । तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात् ॥",
+      tamil: "ௐ பூர்புவஃ ஸ்வஃ । தத்ஸவிதுர்வரேண்யம் பர்கோ தேவஸ்ய தீமஹி தியோ யோ நஃ ப்ரசோதயாத் ॥",
+      iast: "oṃ bhūrbhuvaḥ svaḥ, tatsaviturvareṇyaṃ bhargo devasya dhīmahi dhiyo yo naḥ pracodayāt",
+      englishMeaning:
+        "Om, earth, atmosphere, heaven. Let us meditate on the excellent glory of the divine Savitr (the Sun); may he direct our understanding.",
+      innerMeaning:
+        "Everything before this mantra prepares the body and breath to hold it; everything after releases it back out into the day. Its request is worth sitting with. Not wealth, not safety, not victory over anything, only that the sun direct dhī, one's own faculty of insight. Repetitions are counted on the fingers under cover of the upper cloth, the hand held at neck height for the dawn rite, chest height at noon, navel height at dusk, invisible to anyone watching. Tradition names 108 as the full count, with 54 or a minimum of 28 where time is short. What happens, turn after turn, is less a request answered than an instrument tuned. The same handful of syllables, repeated enough times, stops feeling like something recited and starts to feel like something the mind does on its own.",
+      gestures: ["gayatri-japa-mudra-sumukham", "japa-ganana-mudra"],
+      citation: doubleVerified(36, 21),
+    },
+  ],
+};
+
+export const gayatriUpasthanam: RitualStep = {
+  id: "gayatri-upasthanam",
+  order: 15,
+  name: {
+    devanagari: "गायत्री उपस्थानम्",
+    tamil: "காயத்ரி உபஸ்தானம்",
+    iast: "gāyatrī upasthānam",
+    english: "Sending the Gāyatrī back",
+  },
+  summary: "Having been invited to arrive, the Gāyatrī is now asked to return, happily and at her own pace, to her own abode above Mount Meru.",
+  mantras: [
+    {
+      id: "gayatri-upasthanam-1",
+      devanagari:
+        "ॐ उत्तमे शिखरे देवी भूम्यां पर्वतमूर्धनि । ब्राह्मणेभ्यो ह्यनुज्ञानं गच्छ देवि यथासुखम् ॥",
+      tamil:
+        "ௐ உத்தமே ஶிகரே தேவீ பூம்யாம் பர்வதமூர்தநி । ப்ராஹ்மணேப்யோ ஹ்யநுஜ்ஞாநம் கச்ச தேவி யதாஸுகம் ॥",
+      iast:
+        "oṃ uttame śikhare devī bhūmyāṃ parvatamūrdhani, brāhmaṇebhyo hyanujñānaṃ gaccha devi yathāsukham",
+      englishMeaning:
+        "O goddess, on the excellent peak, on the summit of the mountain on this earth, having given leave to those who worship, go, goddess, as you please, happily.",
+      innerMeaning:
+        "Having been invited in and asked to occupy the heart, the goddess is now asked, just as courteously, to leave: to go to her own abode on the excellent peak above Mount Meru, happily, at her own pace. What happens here is easy to overlook if the arrival at Gāyatrī Āvāhanam felt like the memorable part. Nothing welcomed with real ceremony should simply be dropped when convenient, and this step exists so that the Gāyatrī is not merely finished with but properly seen off.",
+      gestures: ["anjali-mudra-hridaya"],
+      citation: doubleVerified(38, 22),
+    },
+  ],
+};
+
+export const sandhyadiDevataVandanam: RitualStep = {
+  id: "sandhyadi-devata-vandanam",
+  order: 17,
+  name: {
+    devanagari: "सन्ध्यादि देवता वन्दनम्",
+    tamil: "ஸந்த்யாதி தேவதா வந்தனம்",
+    iast: "sandhyādi devatā vandanam",
+    english: "Salutation to the Sandhyā deities",
+  },
+  summary: "Salutations to Sandhyā, Sāvitrī, Gāyatrī, and Sarasvatī, closing with a brief confession that any wrong done was done under the sway of desire or anger, not deliberately.",
+  mantras: [
+    {
+      id: "sandhyadi-devata-vandanam-1",
+      devanagari:
+        "ॐ सन्ध्यायै नमः । ॐ सावित्रै नमः । ॐ गायत्रै नमः । ॐ सरस्वत्यै नमः । ॐ सर्वाभ्यो देवताभ्यो नमो नमः । ॐ कामोऽकार्षीन्मन्युरकार्षीत् नमो नमः ॥",
+      tamil:
+        "ௐ ஸந்த்யாயை நமஃ । ௐ ஸாவித்ரை நமஃ । ௐ காயத்ரை நமஃ । ௐ ஸரஸ்வத்யை நமஃ । ௐ ஸர்வாப்யோ தேவதாப்யோ நமோ நமஃ । ௐ காமோ அகார்ஷீந்மந்யுரகார்ஷீத் நமோ நமஃ ॥",
+      iast:
+        "oṃ sandhyāyai namaḥ, oṃ sāvitrai namaḥ, oṃ gāyatrai namaḥ, oṃ sarasvatyai namaḥ, oṃ sarvābhyo devatābhyo namo namaḥ, oṃ kāmo'kārṣīnmanyurakārṣīt namo namaḥ",
+      englishMeaning:
+        "Salutations to Sandhyā. Salutations to Sāvitrī. Salutations to Gāyatrī. Salutations to Sarasvatī. Salutations, again and again, to all the deities. Desire did it, anger did it: salutations, again and again.",
+      innerMeaning:
+        "Four goddesses are saluted in quick succession, Sandhyā herself, Sāvitrī, Gāyatrī, Sarasvatī, followed by a blanket salutation to every deity at once. Then comes a small, specific admission, easy to miss if read too quickly: whatever was done wrong today was done under the pull of desire or the pull of anger, not from deliberate intent. Kāmo'kārṣīt, manyurakārṣīt: desire did it, anger did it. What happens in this step is a kind of plea entered into the record rather than argued for. The wrongdoing is not denied, only its authorship is questioned, and the salutations continue immediately after, without lingering on the point.",
+      citation: doubleVerified(41, 36),
+    },
+  ],
+};
+
+export const abhivadanam: RitualStep = {
+  id: "abhivadanam",
+  order: 18,
+  name: {
+    devanagari: "अभिवादनम्",
+    tamil: "அபிவாதனம்",
+    iast: "abhivādanam",
+    english: "Self-identification",
+  },
+  summary:
+    "Bent at the waist, palms near the ears, a formula naming one's pravara, gotra, sūtra, and śākhā places the individual inside a named lineage, followed by touching the feet of any elder present.",
+  mantras: [
+    {
+      id: "abhivadanam-1",
+      devanagari:
+        "अभिवादये अमुकप्रवरान्वित अमुकगोत्रः अमुकसूत्रः अमुकशाखाध्यायी श्री अमुकशर्माऽहम् अस्मि भोः ॥",
+      tamil:
+        "அபிவாதயே அமுகப்ரவராந்வித அமுககோத்ரஃ அமுகஸூத்ரஃ அமுகஶாகாத்யாயீ ஶ்ரீ அமுகஶர்மா அஹம் அஸ்மி போஃ ॥",
+      iast:
+        "abhivādaye amuka-pravarānvita amuka-gotraḥ amuka-sūtraḥ amuka-śākhādhyāyī śrī amuka-śarmā'ham asmi bhoḥ",
+      englishMeaning:
+        "I salute you, belonging to the (named) lineage of sages, of the (named) gotra, the (named) sūtra, a student of the (named) branch of the Veda, I, Śrī (named), am here.",
+      innerMeaning:
+        "Bent at the waist, palms held near the ears, a formula is spoken that most people never have occasion to say about themselves outside this moment: their pravara, the sages at the head of their lineage, their gotra, their sūtra, the textual school their family follows, their śākhā, the branch of the Veda they study, and finally their own name. Amuka, so and so, marks each blank in the traditional text, not a gap left by accident but a place built to be filled in aloud. What happens here is a kind of location finding. Long before anyone thinks to ask who a person is in the ordinary sense, this step answers a much older version of that question, and closes with the body itself, touching the feet of whichever elder happens to be present.",
+      citation: doubleVerified(42, 37),
+    },
+  ],
+};
+
+export const digdevataNamaskaram: RitualStep = {
+  id: "digdevata-namaskaram",
+  order: 19,
+  name: {
+    devanagari: "दिग्देवता वन्दनम्",
+    tamil: "திக்தேவதா வந்தனம்",
+    iast: "digdevatā vandanam",
+    english: "Salutation to the guardian deities of the directions",
+  },
+  summary:
+    "Salutation to the four cardinal directions, then above, below, the atmosphere between, the earth, and finally Brahmā and Viṣṇu.",
+  mantras: [
+    {
+      id: "digdevata-namaskaram-1",
+      devanagari:
+        "ॐ प्राच्यै दिशे नमः । ॐ दक्षिणायै दिशे नमः । ॐ प्रतीच्यै दिशे नमः । ॐ उदीच्यै दिशे नमः । ॐ ऊर्ध्वाय नमः । ॐ अधराय नमः । ॐ अन्तरिक्षाय नमः । ॐ भूम्यै नमः । ॐ ब्रह्मणे नमः । ॐ विष्णवे नमः ॥",
+      tamil:
+        "ௐ ப்ராச்யை திஶே நமஃ । ௐ தக்ஷிணாயை திஶே நமஃ । ௐ ப்ரதீச்யை திஶே நமஃ । ௐ உதீச்யை திஶே நமஃ । ௐ ஊர்த்வாய நமஃ । ௐ அதராய நமஃ । ௐ அந்தரிக்ஷாய நமஃ । ௐ பூம்யை நமஃ । ௐ ப்ரஹ்மணே நமஃ । ௐ விஷ்ணவே நமஃ ॥",
+      iast:
+        "oṃ prācyai diśe namaḥ, oṃ dakṣiṇāyai diśe namaḥ, oṃ pratīcyai diśe namaḥ, oṃ udīcyai diśe namaḥ, oṃ ūrdhvāya namaḥ, oṃ adharāya namaḥ, oṃ antarikṣāya namaḥ, oṃ bhūmyai namaḥ, oṃ brahmaṇe namaḥ, oṃ viṣṇave namaḥ",
+      englishMeaning:
+        "Salutations to the eastern direction. Salutations to the southern direction. Salutations to the western direction. Salutations to the northern direction. Salutations above. Salutations below. Salutations to the atmosphere. Salutations to the earth. Salutations to Brahmā. Salutations to Viṣṇu.",
+      innerMeaning:
+        "The body turns through all four cardinal points in sequence, then salutes upward, downward, and the space between, then the earth itself, before finally naming Brahmā and Viṣṇu directly. Two sources agree on this core sequence and differ only at the very end: one adds an eleventh salutation to Mṛtyu, death itself understood here as an aspect of Rudra; the other offers Yama instead, as an optional variant, a small unresolved difference worth naming rather than quietly picking one. What happens across this step is a full turn, literally. Having spent the entire rite facing one direction toward the sun, the practitioner now acknowledges that the sun's direction was never the only direction there was.",
+      gestures: ["dish-namaskara-posture"],
+      citation: doubleVerified(43, 38),
+    },
+  ],
+};

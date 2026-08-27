@@ -1,0 +1,34 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <title>Arghya-pradāna mudrā, standing</title>
+  <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- horizon and sun -->
+    <line x1="10" y1="116" x2="118" y2="116" opacity="0.35"/>
+    <circle cx="100" cy="26" r="11"/>
+    <line x1="100" y1="8" x2="100" y2="2" opacity="0.5"/>
+    <line x1="116" y1="16" x2="121" y2="12" opacity="0.5"/>
+    <line x1="120" y1="26" x2="126" y2="26" opacity="0.5"/>
+
+    <!-- standing figure, upright, face-free -->
+    <circle cx="42" cy="26" r="11"/>
+    <path d="M33,37 C30,58 30,92 33,118 M51,37 C54,50 54,58 53,62"/>
+    <path d="M29,118 L39,118"/>
+
+    <!-- arm reaching forward toward the sun -->
+    <path d="M36,40 C48,44 62,49 72,54"/>
+    <path d="M43,40 C55,45 68,50 76,56"/>
+  </g>
+
+  <!-- cupped hand at the arm's end, water running off the fingertips -->
+  <g fill="none" stroke="#2A1E17" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(84,58) scale(0.46)">
+    <rect x="-17" y="-30" width="34" height="28" rx="13"/>
+    <g transform="rotate(-14 -12 -30)"><rect x="-16" y="-56" width="8" height="27" rx="4"/></g>
+    <g transform="rotate(-5 -4 -30)"><rect x="-8" y="-61" width="8" height="32" rx="4"/></g>
+    <g transform="rotate(5 4 -30)"><rect x="0" y="-63" width="8" height="34" rx="4"/></g>
+    <g transform="rotate(14 12 -30)"><rect x="8" y="-59" width="8" height="30" rx="4"/></g>
+  </g>
+  <g fill="#2A1E17" stroke="none">
+    <circle cx="98" cy="68" r="1.8"/>
+    <circle cx="102" cy="76" r="1.5"/>
+    <circle cx="94" cy="79" r="1.4"/>
+  </g>
+</svg>

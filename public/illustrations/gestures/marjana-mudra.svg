@@ -1,0 +1,25 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <title>Mārjana mudrā</title>
+  <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- crown of the head, face-free -->
+    <circle cx="64" cy="96" r="20"/>
+
+    <!-- hand held above the head, fingers pointing down toward the crown -->
+    <g transform="translate(64,44) rotate(180) scale(0.68)">
+      <rect x="-17" y="-30" width="34" height="28" rx="13"/>
+      <g transform="rotate(-14 -12 -30)"><rect x="-16" y="-56" width="8" height="27" rx="4"/></g>
+      <g transform="rotate(-5 -4 -30)"><rect x="-8" y="-61" width="8" height="32" rx="4"/></g>
+      <g transform="rotate(5 4 -30)"><rect x="0" y="-63" width="8" height="34" rx="4"/></g>
+      <g transform="rotate(14 12 -30)"><rect x="8" y="-59" width="8" height="30" rx="4"/></g>
+    </g>
+  </g>
+
+  <!-- scattered droplets falling toward the crown -->
+  <g fill="#2A1E17" stroke="none">
+    <circle cx="52" cy="66" r="2"/>
+    <circle cx="64" cy="60" r="2.2"/>
+    <circle cx="76" cy="66" r="2"/>
+    <circle cx="58" cy="74" r="1.6"/>
+    <circle cx="70" cy="74" r="1.6"/>
+  </g>
+</svg>

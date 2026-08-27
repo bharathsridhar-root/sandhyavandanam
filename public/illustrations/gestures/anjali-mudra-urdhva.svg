@@ -1,0 +1,17 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <title>Añjali mudrā, raised overhead</title>
+  <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="64" cy="66" r="11"/>
+    <path d="M52,77 C48,90 47,102 50,118 M76,77 C80,90 81,102 78,118"/>
+    <path d="M50,118 L60,118 M68,118 L78,118"/>
+    <path d="M56,70 C54,54 54,38 58,26"/>
+    <path d="M72,70 C74,54 74,38 70,26"/>
+  </g>
+  <g fill="none" stroke="#2A1E17" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" transform="translate(64,26) scale(0.62)">
+    <rect x="-17" y="-30" width="34" height="28" rx="13"/>
+    <g transform="rotate(-14 -12 -30)"><rect x="-16" y="-56" width="8" height="27" rx="4"/></g>
+    <g transform="rotate(-5 -4 -30)"><rect x="-8" y="-61" width="8" height="32" rx="4"/></g>
+    <g transform="rotate(5 4 -30)"><rect x="0" y="-63" width="8" height="34" rx="4"/></g>
+    <g transform="rotate(14 12 -30)"><rect x="8" y="-59" width="8" height="30" rx="4"/></g>
+  </g>
+</svg>
