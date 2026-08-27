@@ -1,0 +1,27 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <title>Arghya-pradāna mudrā, standing</title>
+  <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- horizon and sun -->
+    <line x1="10" y1="112" x2="118" y2="112" opacity="0.4"/>
+    <circle cx="100" cy="30" r="12"/>
+    <line x1="100" y1="10" x2="100" y2="4" opacity="0.6"/>
+    <line x1="118" y1="20" x2="123" y2="16" opacity="0.6"/>
+    <line x1="122" y1="30" x2="127" y2="30" opacity="0.6"/>
+
+    <!-- standing figure, face-free -->
+    <ellipse cx="46" cy="44" rx="9" ry="11"/>
+    <path d="M38,58 C34,74 34,92 38,112 M54,58 C58,74 58,92 54,112" opacity="0.6"/>
+    <line x1="34" y1="112" x2="42" y2="112"/>
+    <line x1="50" y1="112" x2="58" y2="112"/>
+
+    <!-- arms extended forward, cupped hands tilted toward the sun -->
+    <path d="M40,62 C52,66 62,72 70,78"/>
+    <path d="M52,58 C62,64 70,70 74,76"/>
+    <g transform="translate(76,80) rotate(-20)">
+      <path d="M-10,10 C-11,2 -9,-6 -4,-11 C-1,-14 5,-14 8,-10 C11,-6 11,0 10,6 C9,11 4,14 -1,13 C-6,12 -9,12 -10,10 Z"/>
+    </g>
+    <line x1="88" y1="72" x2="98" y2="66" opacity="0.7"/>
+    <circle cx="100" cy="64" r="1.6" opacity="0.7"/>
+    <circle cx="97" cy="72" r="1.4" opacity="0.7"/>
+  </g>
+</svg>

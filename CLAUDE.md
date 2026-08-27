@@ -28,16 +28,39 @@ codebase. Read it before writing code or content.
 
 Primary reference: <https://vignanam.org/veda/nitya-sandhya-vandanam-devanagari.html>
 
+**Supporting references:**
+- <https://knramesh.blogspot.com/2013/06/sandhyavandanam-its-significance.html> —
+  explanatory/significance material; useful for grounding `innerMeaning`
+  prose, not a substitute for a primary mantra-text source.
+- <https://sanskritdocuments.org/itrans/puja/> (and the itrans-format
+  Sandhyāvandanam document it links to) — a scholarly transliteration
+  archive; potentially a stronger primary source than vignanam.org if it can
+  ever be fetched, since it documents itrans text with editorial care.
+
 **Operational note:** outbound network access from this sandboxed environment
-is proxy-restricted, and `vignanam.org` (like most non-allowlisted domains,
-including Wikipedia) could not be fetched while writing this document. No
-mantra text in this repo should be treated as sourced from that page until a
-session with working access has actually pulled it, character by character,
+is proxy-restricted to an allowlist, and none of the three URLs above —
+including sanskritdocuments.org and the blogspot article — could be fetched
+in any session so far (same failure as Wikipedia). No mantra text in this
+repo should be treated as sourced from any of these pages until a session
+with working access has actually pulled the content, character by character,
 and it's been cross-checked. Until then, treat any Sanskrit/Tamil text
 committed to this repo as **draft/placeholder** and mark it `TODO(verify)` in
 the content files. This is sacred liturgical text recited aloud — silently
 "fixing" a visarga, a nasal, or a word boundary from memory is not
 acceptable; every mantra needs a citable source before it ships.
+
+**Current status of the content in this repo:** a first implementation pass
+populated `content/` with mantra and gesture text drafted from general
+knowledge of the standard (Smārta/Yajurveda-common) Sandhyāvandanam
+procedure, precisely because none of the three source URLs were reachable —
+see the operational note above. Every entry's `citation` field says
+`TODO(verify)` for this reason and that is a true, load-bearing warning, not
+boilerplate: treat the mantra text as a structurally-correct but
+**unverified draft** — good enough to build and design against, not good
+enough to chant from or to leave unverified before any real launch. The next
+priority whenever fetch access is available is running the actual source
+pages/PDF against every entry and clearing those `TODO(verify)` markers one
+section at a time.
 
 **Second source (incoming):** the maintainer is adding a PDF of the
 Sandhyāvandanam text directly to this repository. Once it's present, treat
@@ -342,8 +365,30 @@ Guidance:
   the way diagrams appear in a printed ritual manual, not as decorative
   filler. Every drawing on the site should be explaining a specific hand
   position or posture; if it isn't tied to a real gesture, it doesn't belong.
-- Motion is minimal and slow: a gentle fade/rise on scroll-into-view at most.
-  Nothing should feel like a marketing site. No parallax, no autoplay audio.
+- Motion is deliberate and slow, and always **tied to the ritual's own
+  content**, never decorative for its own sake. Two motion systems are in
+  scope:
+  - A gentle fade/rise on scroll-into-view for mantra blocks and gesture
+    panels as the reader reaches them.
+  - A **scroll-linked parallax sky** behind the section headers: the
+    background gradient drifts from `turmeric` dawn tones through a bright
+    noon neutral to `dusk` indigo as the reader scrolls from Prātaḥsandhyā
+    through Mādhyāhnika to Sāyaṃsandhya, with a simple line-art sun disc and
+    a distant temple-gopuram silhouette moving at slightly different speeds
+    to give depth. This is legible as *the sun's actual arc across the
+    day* — the one parallax concept that is part of the subject matter
+    rather than borrowed marketing-site spectacle — so it's allowed, but
+    stays restrained: slow, low-amplitude movement, no bouncing, no
+    scroll-jacking, no elements that rush past faster than the reader
+    scrolls.
+  - No autoplay audio, no confetti/particle effects, and nothing on the
+    page should move on its own without a scroll or interaction driving it
+    — a static screenshot of any moment should still look calm and
+    intentional, the way a paused frame of the sun's motion would.
+  - Respect `prefers-reduced-motion`: replace the scroll-linked parallax
+    with the same gradient applied as a static per-section background (no
+    animated transform) and drop scroll-into-view motion to a plain
+    opacity fade with no vertical movement.
 - `dusk` sections (if used for Sāyaṃsandhya or the footer) are the one place
   allowed real contrast — same principle as a printed page using a shaded
   box for a specific passage, not a "dark mode toggle."

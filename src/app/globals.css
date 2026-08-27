@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Colors — CLAUDE.md §7 Colors */
+  --color-canvas: #fbf6ea;
+  --color-canvas-raised: #f4ebd8;
+  --color-ink: #2a1e17;
+  --color-ink-soft: #4a392e;
+  --color-muted-ink: #7a6752;
+  --color-hairline: #d8c7a6;
+  --color-kumkum: #b23a2e;
+  --color-kumkum-soft: #c96a5f;
+  --color-turmeric: #c98a2c;
+  --color-dusk: #232b45;
+  --color-dusk-ink: #ede3c8;
+
+  /* Fonts — next/font variables are set on <html> in layout.tsx */
+  --font-mantra-devanagari: var(--font-tiro-devanagari), "Noto Serif Devanagari", serif;
+  --font-mantra-tamil: var(--font-tiro-tamil), "Noto Serif Tamil", serif;
+  --font-display: var(--font-cormorant), "Cormorant Garamond", serif;
+  --font-body: var(--font-eb-garamond), "EB Garamond", serif;
+  --font-ui: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+}
+
+/* Devanagari and Tamil need different line-heights to read as balanced —
+   CLAUDE.md §7 Typography. Applied via the [data-script] attribute the
+   ScriptProvider sets on <html>. */
+[data-script="devanagari"] .mantra-text {
+  font-family: var(--font-mantra-devanagari);
+  line-height: 1.9;
+}
+
+[data-script="tamil"] .mantra-text {
+  font-family: var(--font-mantra-tamil);
+  line-height: 2.05;
+}
+
+::selection {
+  background: var(--color-kumkum-soft);
+  color: var(--color-canvas);
+}

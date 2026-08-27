@@ -1,0 +1,20 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <title>Añjali mudrā, held at the chest</title>
+  <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- shoulders, face-free -->
+    <path d="M32,54 C40,44 52,40 64,40 C76,40 88,44 96,54" opacity="0.35"/>
+
+    <!-- two palms pressed together at chest height -->
+    <g transform="translate(52,78) rotate(-6)">
+      <path d="M-9,14 C-11,2 -9,-10 -4,-18 C-2,-21 1,-21 3,-18 C4,-16 4,-14 4,-12 L4,16 C4,20 0,22 -3,21 C-6,20 -9,18 -9,14 Z"/>
+      <path d="M-6,-6 C-8,-11 -7,-16 -4,-19"/>
+      <path d="M-1,-10 C-1,-16 0,-20 2,-22"/>
+    </g>
+    <g transform="translate(76,78) scale(-1,1) rotate(-6)">
+      <path d="M-9,14 C-11,2 -9,-10 -4,-18 C-2,-21 1,-21 3,-18 C4,-16 4,-14 4,-12 L4,16 C4,20 0,22 -3,21 C-6,20 -9,18 -9,14 Z"/>
+      <path d="M-6,-6 C-8,-11 -7,-16 -4,-19"/>
+      <path d="M-1,-10 C-1,-16 0,-20 2,-22"/>
+    </g>
+    <line x1="64" y1="58" x2="64" y2="96" opacity="0.3"/>
+  </g>
+</svg>

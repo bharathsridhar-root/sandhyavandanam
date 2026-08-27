@@ -1,0 +1,27 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <title>Diś-namaskāra mudrā</title>
+  <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- faint compass ring with eight direction ticks -->
+    <circle cx="64" cy="70" r="46" stroke-dasharray="1 7" opacity="0.5"/>
+    <g opacity="0.55">
+      <line x1="64" y1="24" x2="64" y2="14"/>
+      <line x1="64" y1="116" x2="64" y2="126"/>
+      <line x1="18" y1="70" x2="8" y2="70"/>
+      <line x1="110" y1="70" x2="120" y2="70"/>
+      <line x1="32" y1="38" x2="25" y2="31"/>
+      <line x1="96" y1="38" x2="103" y2="31"/>
+      <line x1="32" y1="102" x2="25" y2="109"/>
+      <line x1="96" y1="102" x2="103" y2="109"/>
+    </g>
+
+    <!-- standing figure mid-turn, palms joined at chest -->
+    <ellipse cx="64" cy="48" rx="9" ry="11"/>
+    <path d="M56,62 C52,78 52,94 56,108 M72,62 C76,78 76,94 72,108" opacity="0.6"/>
+    <line x1="50" y1="108" x2="60" y2="112"/>
+    <line x1="68" y1="112" x2="78" y2="108"/>
+
+    <g transform="translate(64,72)">
+      <path d="M-7,10 C-9,1 -7,-8 -3,-13 C-1,-15 1,-15 3,-13 C4,-11 4,-9 4,-6 L4,11 C4,14 0,16 -2,15 C-5,14 -7,13 -7,10 Z"/>
+    </g>
+  </g>
+</svg>

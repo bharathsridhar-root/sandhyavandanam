@@ -1,0 +1,17 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <title>Japa-gaṇanā mudrā</title>
+  <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(60,70)">
+      <!-- loosely closed palm -->
+      <path d="M-14,6 C-16,-6 -12,-16 -4,-20 C4,-24 14,-20 17,-10 C19,-2 17,8 10,14 C2,19 -8,17 -14,6 Z"/>
+      <!-- ring and little finger curled into the palm, counted joints marked -->
+      <circle cx="4" cy="-6" r="1.8"/>
+      <circle cx="9" cy="-2" r="1.8"/>
+      <circle cx="12" cy="4" r="1.8"/>
+      <!-- thumb reaching to touch a counted joint -->
+      <path d="M-12,2 C-6,-2 0,-4 4,-6"/>
+      <!-- index finger held apart, unused for counting -->
+      <path d="M-6,-18 C-10,-26 -14,-32 -16,-38"/>
+    </g>
+  </g>
+</svg>

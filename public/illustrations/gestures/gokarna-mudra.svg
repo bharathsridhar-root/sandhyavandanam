@@ -1,0 +1,16 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <title>Gokarṇa mudrā</title>
+  <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(58,78) rotate(-18)">
+      <path d="M-11,0 C-13,-14 -10,-24 -6,-30 C-3,-34 3,-34 6,-30 C10,-24 13,-14 11,0 C11,10 6,16 0,17 C-6,16 -11,10 -11,0 Z"/>
+      <path d="M-9,-22 C-11,-28 -10,-33 -6,-36"/>
+      <path d="M-3,-28 C-4,-34 -2,-39 2,-40"/>
+      <path d="M3,-28 C4,-33 6,-37 9,-37"/>
+      <path d="M9,-22 C11,-27 13,-30 17,-30"/>
+      <path d="M10,-4 C20,-9 27,-8 28,-1"/>
+    </g>
+    <circle cx="84" cy="70" r="2.4"/>
+    <circle cx="90" cy="76" r="2"/>
+    <circle cx="86" cy="82" r="1.6"/>
+  </g>
+</svg>

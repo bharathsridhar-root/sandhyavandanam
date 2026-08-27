@@ -1,0 +1,23 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <title>Mārjana mudrā</title>
+  <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- crown of the head, face-free -->
+    <path d="M40,96 C40,74 50,60 64,60 C78,60 88,74 88,96" opacity="0.35"/>
+
+    <!-- hand held above the head, fingertips together -->
+    <g transform="translate(64,40) rotate(180)">
+      <path d="M-11,0 C-13,-14 -10,-24 -6,-30 C-3,-34 3,-34 6,-30 C10,-24 13,-14 11,0 C11,10 6,16 0,17 C-6,16 -11,10 -11,0 Z"/>
+      <path d="M-9,-22 C-10,-29 -7,-34 -2,-35"/>
+      <path d="M-3,-28 C-3,-35 -1,-40 3,-41"/>
+      <path d="M3,-28 C4,-34 6,-38 10,-38"/>
+      <path d="M9,-22 C11,-27 14,-30 18,-30"/>
+    </g>
+
+    <!-- scattered droplets falling toward the crown -->
+    <circle cx="52" cy="58" r="2"/>
+    <circle cx="64" cy="52" r="2.2"/>
+    <circle cx="76" cy="58" r="2"/>
+    <circle cx="58" cy="66" r="1.6"/>
+    <circle cx="70" cy="66" r="1.6"/>
+  </g>
+</svg>

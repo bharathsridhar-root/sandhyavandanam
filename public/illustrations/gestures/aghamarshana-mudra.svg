@@ -1,0 +1,24 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <title>Aghamarṣaṇa mudrā</title>
+  <g fill="none" stroke="#2A1E17" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- shoulder/torso reference -->
+    <path d="M70,110 C74,90 78,74 82,64" opacity="0.35"/>
+
+    <!-- arm extended left and back, fingers spread mid-throw -->
+    <path d="M82,64 C64,58 44,54 26,52"/>
+    <g transform="translate(24,50) rotate(-8) scale(1.05)">
+      <ellipse cx="0" cy="0" rx="11" ry="8"/>
+      <path d="M-8,-4 C-14,-8 -19,-9 -24,-8"/>
+      <path d="M-3,-7 C-7,-13 -11,-16 -16,-16"/>
+      <path d="M3,-7 C1,-14 -1,-18 -5,-20"/>
+      <path d="M8,-4 C7,-11 6,-16 4,-20"/>
+      <path d="M9,1 C10,-5 11,-9 11,-13"/>
+    </g>
+
+    <!-- water flung clear of the hand -->
+    <circle cx="8" cy="34" r="2.2"/>
+    <circle cx="2" cy="44" r="1.8"/>
+    <circle cx="12" cy="46" r="1.6"/>
+    <circle cx="-2" cy="30" r="1.4"/>
+  </g>
+</svg>
