@@ -1,18 +1,24 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
+import { AnimatePresence } from "framer-motion";
 import type { GestureEntry } from "@/content/types";
 import { ScriptText } from "./ScriptText";
+import { GestureModal } from "./GestureModal";
 
 /**
  * Docks beside its mantra block on desktop, below it on mobile — CLAUDE.md
  * §5. Carries the illustration, the gesture's name in the active script, a
  * one-line significance note, and the ritual step it belongs to. Never
  * inserted into the mantra block's own script → meaning → inner meaning →
- * citation order; it sits adjacent to it.
+ * citation order; it sits adjacent to it. The illustration is clickable —
+ * it opens a larger view with the full hand-position description.
  */
 export function GesturePanel({ gestures }: { gestures: GestureEntry[] }) {
+  const [openId, setOpenId] = useState<string | null>(null);
   if (gestures.length === 0) return null;
+  const open = gestures.find((g) => g.id === openId) ?? null;
 
   return (
     <aside
@@ -24,7 +30,12 @@ export function GesturePanel({ gestures }: { gestures: GestureEntry[] }) {
           key={g.id}
           className="flex-1 rounded-lg border border-hairline bg-canvas-raised p-4"
         >
-          <div className="mx-auto aspect-square w-32 shrink-0">
+          <button
+            type="button"
+            onClick={() => setOpenId(g.id)}
+            className="mx-auto block aspect-square w-32 shrink-0 cursor-zoom-in rounded transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-kumkum"
+            aria-label={`Enlarge illustration: ${g.name.iast}`}
+          >
             {/* Hand-authored line art — see /public/illustrations/gestures */}
             <Image
               src={g.illustration}
@@ -35,7 +46,7 @@ export function GesturePanel({ gestures }: { gestures: GestureEntry[] }) {
               loading="lazy"
               unoptimized
             />
-          </div>
+          </button>
           <figcaption className="mt-3 space-y-1.5 text-center">
             <ScriptText
               as="p"
@@ -52,6 +63,10 @@ export function GesturePanel({ gestures }: { gestures: GestureEntry[] }) {
           </figcaption>
         </figure>
       ))}
+
+      <AnimatePresence>
+        {open && <GestureModal key={open.id} gesture={open} onClose={() => setOpenId(null)} />}
+      </AnimatePresence>
     </aside>
   );
 }

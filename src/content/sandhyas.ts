@@ -1,17 +1,20 @@
 import type { RitualStep, SandhyaMeta, SandhyaTime } from "./types";
 import {
   achamanam,
-  bhutocchatanam,
+  ganapatiDhyanam,
   pranayamam,
-  marjanam,
-  aghamarshanam,
+  prokshanamMarjanam,
+  punahProkshanam,
+  sandhyopasanam,
+  adityadiTarpanam,
   gayatriAvahanam,
   gayatriJapa,
+  gayatriUpasthanam,
+  sandhyadiDevataVandanam,
   abhivadanam,
   digdevataNamaskaram,
-  samarpanam,
 } from "./shared-steps";
-import { sankalpam, arghyapradanam, suryopasthanam } from "./sandhya-specific";
+import { sankalpam, prashanam, arghyapradanam, suryopasthanam } from "./sandhya-specific";
 
 export const sandhyaMeta: Record<SandhyaTime, SandhyaMeta> = {
   pratah: {
@@ -20,7 +23,7 @@ export const sandhyaMeta: Record<SandhyaTime, SandhyaMeta> = {
     window: "performed before sunrise",
     accent: "turmeric",
     description:
-      "The most commonly practiced of the three, performed as night gives way to light — the full thirteen-step sequence in its most complete traditional form.",
+      "The most commonly practiced of the three, performed as night gives way to light — the full sequence in its most complete traditional form.",
   },
   madhyahnika: {
     time: "madhyahnika",
@@ -43,18 +46,22 @@ export const sandhyaMeta: Record<SandhyaTime, SandhyaMeta> = {
 function buildSteps(time: SandhyaTime): RitualStep[] {
   return [
     achamanam,
-    bhutocchatanam,
+    ganapatiDhyanam,
     pranayamam,
     sankalpam(time),
-    marjanam,
-    aghamarshanam,
+    prokshanamMarjanam,
+    prashanam(time),
+    punahProkshanam,
     arghyapradanam(time),
+    sandhyopasanam,
+    adityadiTarpanam,
     gayatriAvahanam,
     gayatriJapa,
+    gayatriUpasthanam,
     suryopasthanam(time),
+    sandhyadiDevataVandanam,
     abhivadanam,
     digdevataNamaskaram,
-    samarpanam,
   ].sort((a, b) => a.order - b.order);
 }
 

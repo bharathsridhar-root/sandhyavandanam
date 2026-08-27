@@ -5,6 +5,7 @@ import type { MantraEntry } from "@/content/types";
 import { gesturesById } from "@/content/gestures";
 import { ScriptText } from "./ScriptText";
 import { GesturePanel } from "./GesturePanel";
+import { GlossedText } from "./GlossedText";
 
 /**
  * The core repeating unit of the site — CLAUDE.md §7 Layout: script line →
@@ -39,7 +40,7 @@ export function MantraBlock({ mantra }: { mantra: MantraEntry }) {
           {mantra.englishMeaning}
         </p>
         <p className="font-body text-[1.0625rem] leading-relaxed text-ink-soft">
-          {mantra.innerMeaning}
+          <GlossedText text={mantra.innerMeaning} />
         </p>
         <p className="font-ui text-[0.8125rem] font-medium tracking-wide text-muted-ink">
           {mantra.citation}

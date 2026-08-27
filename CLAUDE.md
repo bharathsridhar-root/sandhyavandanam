@@ -53,14 +53,35 @@ acceptable; every mantra needs a citable source before it ships.
 populated `content/` with mantra and gesture text drafted from general
 knowledge of the standard (Smārta/Yajurveda-common) Sandhyāvandanam
 procedure, precisely because none of the three source URLs were reachable —
-see the operational note above. Every entry's `citation` field says
-`TODO(verify)` for this reason and that is a true, load-bearing warning, not
-boilerplate: treat the mantra text as a structurally-correct but
-**unverified draft** — good enough to build and design against, not good
-enough to chant from or to leave unverified before any real launch. The next
-priority whenever fetch access is available is running the actual source
-pages/PDF against every entry and clearing those `TODO(verify)` markers one
-section at a time.
+see the operational note above. A second pass then verified and corrected
+that draft against **`Yajurveda-Sandhyavandanam.pdf`**, added directly to
+this repo's `main` branch by the maintainer (accessible via git even though
+the web is not): Kaustubha Chakravarthy, *"Yajurveda Sandhyavandanam —
+detailed procedure with illustrations"* (ver 4.0, Bangalore, 25 March 2010),
+a 46-page compilation with Devanagari mantra text, English translation, and
+photographs of a practitioner performing every gesture. Where an entry's
+`citation` field cites this source with a page number, treat it as checked;
+where it still says `TODO(verify)`, it has not been checked against
+anything and remains a structurally-plausible but unverified draft.
+
+Two things to know about this source before treating it as final:
+- It documents one named, dated compiler's own study notes — a real,
+  citable source with real scriptural grounding cited throughout (Taittirīya
+  Āraṇyaka, Chāndogya Upaniṣad, etc.), but not a critical edition. Where it
+  disagrees with `sandhyaavandanam.pdf`, `YajurUpakarma-devanagari.pdf`, or
+  `input.md` (also now in the repo, not yet cross-checked as of this
+  writing), that disagreement should be surfaced, not silently resolved.
+- `YajurUpakarma-tamil.pdf`, despite its similar filename, is a **different
+  ceremony** (the annual Upakarma thread-renewal rite, not daily
+  Sandhyāvandanam) and should not be mined for Sandhyāvandanam mantra text.
+  It's still useful for one thing: it's a real example of the
+  **numeral-superscript Grantha-Tamil convention** actual Tamil Vedic
+  publishers use (a base Tamil consonant plus a superscript `3` for the
+  voiced stop, `4` for the voiced aspirate — e.g. த3 = *da*, த4 = *dha*,
+  ப3 = *ba*, ப4 = *bha* — since plain Tamil script doesn't distinguish
+  these). The Tamil transliterations currently in this repo use a simpler,
+  informal convention (one base letter covers k/kh/g/gh, etc.) rather than
+  this precise one — see the open question in §10.
 
 **Second source (incoming):** the maintainer is adding a PDF of the
 Sandhyāvandanam text directly to this repository. Once it's present, treat
@@ -128,30 +149,62 @@ Rules:
 
 ## 4. Ritual structure (reference outline)
 
-Use this as the section/navigation spine. Confirm against the source
-material and adjust rather than treating it as gospel — traditions vary in
-exact ordering and inclusion.
+Use this as the section/navigation spine. Verified against
+`Yajurveda-Sandhyavandanam.pdf` (§2), which frames the rite in two named
+halves — **Pūrvāṅgam** (steps 1–10, also just called "Sandhyāvandanam")
+and **Uttarāṅgam** (steps 11–17, also called "Gāyatrī Japam"). The site's
+own UI may still present this as one flowing section per sandhyā rather
+than reproducing the Pūrvāṅgam/Uttarāṅgam split literally — that's a
+presentation choice, not a content omission, as long as every step below
+is actually shown somewhere. A few source steps are marked *optional* —
+generally Śrī Vaiṣṇava-specific additions (Satvika Tyāga, the Aṣṭākṣara
+japa, Śrīraṅga Maṅgala Manim) — and are not required for the core rite;
+include them only clearly labeled as optional, not folded into the main
+sequence.
 
 | Order | Section (IAST) | What it is |
 |---|---|---|
-| 1 | Prātaḥ-saṅkalpa / Ācamanam | Sipping water while invoking names of Viṣṇu; declares intent to perform the rite |
-| 2 | Bhūtocchāṭanam | Clearing inauspicious influences from the space |
-| 3 | Prāṇāyāmam | Regulated breath, precedes and steadies everything that follows |
-| 4 | Saṅkalpam | The formal, spoken resolve — naming the day, place, and purpose of the act about to be performed |
-| 5 | Mārjanam | Sprinkling water on oneself with purificatory verses |
-| 6 | Aghamarṣaṇam | Mantra of release from accumulated sin/impurity, followed by another Ācamanam |
-| 7 | Prātaḥ / Mādhyāhnika / Sāyaṃ Arghyapradānam | Offering water to Sūrya — the form and mantra shift by time of day (rising, zenith, setting sun) |
-| 8 | Gāyatrī Āvāhanam | Invocation of the Gāyatrī as a living presence, not a fixed idol |
-| 9 | Gāyatrī Japa | Silent/measured repetition of the Gāyatrī mantra — the ritual's center of gravity |
-| 10 | Sūryopasthānam | Standing prayer to the sun as witness and sustaining power |
-| 11 | Abhivādanam | Self-identification — gotra, pravara, Veda, śākhā — spoken to elders/the divine |
-| 12 | Digdevatā Namaskāram | Salutation to the guardian deities of the directions |
-| 13 | Samarpaṇam | Closing offering of the act itself, without claim to its fruit |
+| 1 | Ācamanam | Three names of Viṣṇu (Acyuta, Ananta, Govinda) swallowed, then all twelve Keśava-names recited while touching specific points on the hand/body |
+| 2 | Gaṇapati Dhyānam | A short invocation of Gaṇapati (as "Viṣṇu... śaśivarṇam") to clear obstacles before the rite proper |
+| 3 | Prāṇāyāmam | Regulated breath carrying the seven vyāhṛtis, the Gāyatrī mantra, and a closing formula |
+| 4 | Saṅkalpam | The formal, spoken resolve — naming the specific sandhyā about to be performed |
+| *4a* | *Sātvika Tyāga (optional, Śrī Vaiṣṇava)* | *Surrender/dedication of the act to the Lord* |
+| 5 | Prokṣaṇam / Mārjanam | Sprinkling water on the head (and, for one line, the feet) with the "Āpo hi ṣṭhā" verses |
+| 6 | Prāśanam | A distinct sipping purification, with a different verse for each sandhyā |
+| 7 | Punaḥ Prokṣaṇam | A second sprinkling, invoking Dadhikrāvṇa/Hayagrīva, then repeating the Mārjanam verses |
+| 8 | Arghyapradānam | Standing, heels raised, the Gāyatrī mantra offered three times toward Sūrya, followed by a "prāyaścitta" (apology-for-delay) arghya |
+| 9 | Sandhyopāsanam | A brief meditation, facing the sun with añjali mudrā: "that sun is Brahman, and I am that Brahman" |
+| 10 | Ādityādi / Keśavādi Tarpaṇam | Water offered in thanks to the nine planets and the twelve Viṣṇu-names |
+| 11 | Ācamanam (repeated) | Opens Uttarāṅgam; same as step 1 |
+| 12 | Saṅkalpam (Gāyatrī japa) | Resolve naming how many repetitions (28/108/etc.) are about to be done |
+| 13 | Gāyatrī Āvāhanam | Invocation of the Gāyatrī as a living, gracious presence, not a fixed meter |
+| 14 | Gāyatrī Japa | Silent/measured repetition of the Gāyatrī mantra — the ritual's center of gravity; counted on the fingers, held at neck/chest/navel height for prātaḥ/mādhyāhnika/sāyam respectively |
+| 15 | Gāyatrī Upasthānam | A short send-off, asking the Gāyatrī to return to her abode |
+| 16 | Sūryopasthānam | Standing prayer to the sun — a distinct verse for each sandhyā (Mitra at dawn, Varuṇa at dusk) |
+| 17 | Sandhyādi Devatā Vandanam | Salutation to Sandhyā, Sāvitrī, Gāyatrī, and Sarasvatī, plus a confession of desire/anger |
+| 18 | Abhivādanam | Self-identification — pravara, gotra, sūtra, śākhā, name — spoken bent at the waist, palms near the ears |
+| 19 | Dik Devatā Vandanam | Salutation to the four cardinal directions, then above/below/atmosphere/earth/Brahmā/Viṣṇu |
+| 20 | Ācamanam (closing) | Closes the rite; same as step 1 |
 
 Design the site so the **three sandhyās** (prātaḥ/dawn, mādhyāhnika/noon,
-sāyam/dusk) are visible as a throughline — arghyapradānam differs across
-them and that's a natural place to show the same skeleton with three
-different moments of the sun.
+sāyam/dusk) are visible as a throughline — Arghyapradānam, Prāśanam, and
+Sūryopasthānam all differ across them, which is a natural place to show
+the same skeleton with three different moments of the sun.
+
+**A note on what changed from the original draft outline:** the first
+version of this table (written before any source could be checked)
+included Bhūtocchāṭanam, Aghamarṣaṇam, and a closing Samarpaṇam, all drawn
+from general knowledge of Sandhyāvandanam broadly. Once the verified
+sources in §2 were actually checked, none of the three turned out to be
+part of *this* recension — their absence from a table of contents that is
+otherwise this detailed is real evidence, not an oversight in the source.
+They were removed from the site rather than kept as unverified filler,
+per the "default to whatever single recension the source presents" rule
+in §2. This doesn't mean they're inauthentic elsewhere: Aghamarṣaṇa-sūkta
+recitation and a closing dedication are both well attested in other
+paddhatis. If a source that documents this exact recension including
+those steps ever turns up, they can be reinstated — but they should not be
+reintroduced from memory.
 
 ## 5. Gesture illustrations — mudrās and postures
 
@@ -166,38 +219,44 @@ line drawing of the actual hand shape communicates something prose alone
 can't, and puts the body on equal footing with the text instead of treating
 gesture as an afterthought.
 
-**Working catalog** (draft skeleton — verify names, exact hand positions,
-and which gestures the source material actually documents before
-finalizing; don't illustrate a gesture the source doesn't support):
+**Working catalog** — cross-verified against the two sources in §2 (both
+include photographs or worked descriptions of each hand position), with
+one exception noted below:
 
 - **Gokarṇa mudrā** (Ācamanam) — right hand shaped like a cow's ear; water
-  is sipped from the natural hollow at the base of the thumb rather than
-  poured straight into the mouth.
+  is swallowed from the hollow at the base of the thumb for the first three
+  names, then the remaining nine are touched, without water, to specific
+  points on the face, shoulders, and head.
 - **Prāṇāyāma hasta** (Prāṇāyāmam) — right-hand nostril control (thumb and
-  ring/little finger alternately closing each nostril); left hand typically
-  resting on the left knee.
-- **Mārjana / Aghamarṣaṇa gestures** — water taken and sprinkled, or
-  discarded with force, using finger positioning distinct from ordinary
-  washing.
-- **Añjali mudrā** (Namaskāram, Sūryopasthānam, Abhivādanam) — palms joined;
-  the same basic gesture of salutation takes a different meaning depending
-  on where it's held (chest height vs. above the head) at each moment — the
-  illustrations should make that contextual difference visible, not draw
-  one generic "prayer hands" image and reuse it everywhere.
-- **Arghya-pradāna posture** — standing, water offered through joined palms
-  tilted so it runs off the fingertips toward the sun, distinct from
-  pouring water downward for ordinary use.
+  ring finger alternately closing each nostril, in a 1:3:2 inhale/hold/
+  exhale ratio); index and middle fingers folded into the palm.
+- **Mārjana mudrā** (Prokṣaṇam/Mārjanam, Punaḥ Prokṣaṇam) — water sprinkled
+  on the head line by line, one line sprinkled on the feet instead, the
+  final line circled clockwise around the head.
+- **Añjali mudrā**, two contextual forms — held at the **chest**
+  (hṛdaya) for Gāyatrī Āvāhanam/Upasthānam, or raised **overhead** (ūrdhva)
+  for Sūryopasthānam and (at the chest again) Sandhyopāsanam. The
+  illustrations make this contextual difference visible rather than reusing
+  one generic "prayer hands" image everywhere.
+- **Arghya-pradāna mudrā** — standing, heels raised, water offered through
+  joined cupped palms tilted so it runs off the fingertips toward the sun.
 - **Gāyatrī japa mudrās** — a traditional set of hand positions (commonly
-  enumerated as roughly two dozen, e.g. Sumukham, Sampuṭam, Vitatam,
-  Vistṛtam, and others) shown before Gāyatrī japa. Because the exact
-  set/order/appearance varies by tradition and digest text (e.g.
-  Dharmasindhu-style enumerations), this needs its own verified sub-list
-  once the source is confirmed — do not invent an order or fill in unclear
+  enumerated as roughly two dozen) shown before Gāyatrī japa. Neither
+  source spells out the full set/order, so only one representative entry
+  (Sumukham) is illustrated — do not invent an order or fill in unclear
   entries from memory.
-- **Japa-gaṇanā mudrā** — the finger-counting method used to track Gāyatrī
-  repetitions by hand (avoiding the index finger) when a mālā isn't used.
-- **Diś-namaskāra postures** — turning to face each cardinal/intermediate
-  direction for Digdevatā Namaskāram.
+- **Japa-gaṇanā mudrā** — finger-joint counting on the right hand (avoiding
+  the index finger), the hand held under the upper cloth at neck height for
+  the dawn rite, chest height at noon, navel height at dusk.
+- **Diś-namaskāra posture** — turning through the four cardinal directions
+  for Digdevatā Vandanam, palms joined at the chest at each turn.
+
+One entry from the original draft skeleton — an Aghamarṣaṇa-specific
+discard gesture — has been **dropped**: neither verified source includes
+an Aghamarṣaṇa step in this recension of the rite (see the note on
+Bhūtocchāṭanam/Aghamarṣaṇam/Samarpaṇam in §4's history below), so there is
+nothing to illustrate it against. If a future source confirms the step
+belongs to this recension, the gesture can be reinstated the same way.
 
 **Illustration style** — extends the site's line-art visual language
 (§7) specifically to gestures:
@@ -406,9 +465,18 @@ Guidance:
 - **Citation footer** — every mantra block ends in a small `label`-styled
   citation/source line. This is not optional decoration; it's the site's
   credibility for liturgical accuracy.
-- **Glossary tooltip** (optional, nice-to-have) — hovering an unfamiliar term
-  (gotra, pravara, arghya) in the inner-meaning prose surfaces a one-line
-  definition, so paragraphs don't have to over-explain inline.
+- **Glossary tooltip** (implemented) — an unfamiliar term (gotra, pravara,
+  arghya, japa, mudrā, …) in the inner-meaning prose is click-to-reveal
+  rather than hover-only, so it works the same on touch and desktop; only
+  the first occurrence per paragraph is marked, so the prose doesn't turn
+  into a field of underlines. Term list: `src/lib/glossary.ts`.
+- **Gesture illustration modal** (implemented) — clicking a gesture's
+  thumbnail in the Gesture panel opens a larger view with the full
+  hand-position description, significance note, and citation, which the
+  small panel card doesn't have room for.
+- **Section nav scroll-spy** (implemented) — the desktop side-rail
+  highlights whichever step is currently in view as the reader scrolls,
+  via `IntersectionObserver`.
 
 ### Responsive behavior
 
@@ -496,8 +564,8 @@ but open to revision once work starts:
 2. Stand up the content schema (§3), the gesture catalog schema (§5), and
    Tailwind theme tokens (§7).
 3. Build the mantra block component and one full section (Ācamanam through
-   Aghamarṣaṇam) end to end, including the script switch and, if the source
-   documents them, the gestures for that section.
+   Prokṣaṇam/Mārjanam) end to end, including the script switch and, if the
+   source documents them, the gestures for that section.
 4. Extend to the rest of Prātaḥsandhyā, then Mādhyāhnika and Sāyaṃsandhya.
 5. Add section nav, citation footer, responsive pass, accessibility pass
    (including gesture alt text).

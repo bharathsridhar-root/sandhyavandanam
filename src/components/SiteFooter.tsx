@@ -11,13 +11,14 @@ export function SiteFooter() {
           कायेन वाचा मनसेन्द्रियैर्वा, यद्यत् करोमि तत् समर्पयामि
         </p>
         <p className="font-ui text-sm leading-relaxed opacity-80">
-          This is a draft, in-progress explanation of the Nitya Sandhyāvandanam —
-          not a certified ritual guide. Mantra text, translations, and gesture
-          descriptions throughout this site are first drafts awaiting
-          verification against a citable source; see each entry&rsquo;s citation
-          line and{" "}
+          This is an in-progress explanation of the Nitya Sandhyāvandanam —
+          not a certified ritual guide. Most mantra text and gesture
+          descriptions on this site are now cross-verified against two
+          independent published sources, named on each entry&rsquo;s citation
+          line; entries still marked <code className="rounded bg-white/10 px-1 py-0.5 text-xs">TODO(verify)</code>{" "}
+          have not been checked against anything yet. See{" "}
           <code className="rounded bg-white/10 px-1 py-0.5 text-xs">CLAUDE.md</code>{" "}
-          in the project repository for sourcing status.
+          in the project repository for the full sourcing status.
         </p>
         <p className="font-ui text-xs uppercase tracking-wide opacity-60">
           Prātaḥ · Mādhyāhnika · Sāyaṃ
