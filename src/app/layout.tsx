@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Tiro_Devanagari_Sanskrit, Tiro_Tamil, Cormorant, EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { ScriptProvider } from "@/lib/script-context";
+import { GuidedPaceProvider } from "@/lib/guided-pace-context";
 
 const tiroDevanagari = Tiro_Devanagari_Sanskrit({
   variable: "--font-tiro-devanagari",
@@ -51,7 +52,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${tiroDevanagari.variable} ${tiroTamil.variable} ${cormorant.variable} ${ebGaramond.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-canvas text-ink font-ui">
-        <ScriptProvider>{children}</ScriptProvider>
+        <ScriptProvider>
+          <GuidedPaceProvider>{children}</GuidedPaceProvider>
+        </ScriptProvider>
       </body>
     </html>
   );

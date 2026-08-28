@@ -53,7 +53,11 @@ export function SandhyaSection({ time }: { time: SandhyaTime }) {
           </div>
           <div className="divide-y divide-hairline/60">
             {step.mantras.map((mantra) => (
-              <MantraBlock key={mantra.id} mantra={mantra} />
+              // Shared steps (Ācamanam, Gāyatrī japa, ...) render the same
+              // mantra content once per sandhyā, so mantra.id alone repeats
+              // across the page — uid disambiguates each rendered instance
+              // for Guided pace's playback coordination and auto-scroll.
+              <MantraBlock key={mantra.id} mantra={mantra} uid={`${time}-${step.id}-${mantra.id}`} />
             ))}
           </div>
         </div>

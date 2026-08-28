@@ -63,3 +63,19 @@ body {
   background: var(--color-kumkum-soft);
   color: var(--color-canvas);
 }
+
+/* Guided pace word-by-word highlight — CLAUDE.md's kumkum-accents rule
+   (never color alone) is satisfied by the weight shift, not just the hue. */
+.guided-word-active {
+  color: var(--color-kumkum);
+  font-weight: 600;
+  background: color-mix(in srgb, var(--color-kumkum) 14%, transparent);
+  border-radius: 0.25em;
+  padding: 0.02em 0.08em;
+  transition: color 0.15s ease, background-color 0.15s ease, font-weight 0.15s ease;
+}
+
+.guided-word-done {
+  color: var(--color-muted-ink);
+  transition: color 0.4s ease;
+}

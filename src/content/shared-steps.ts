@@ -279,6 +279,7 @@ export const gayatriJapa: RitualStep = {
         "Everything before this mantra prepares the body and breath to hold it; everything after releases it back out into the day. Its request is worth sitting with. Not wealth, not safety, not victory over anything, only that the sun direct dhī, one's own faculty of insight. Repetitions are counted on the fingers under cover of the upper cloth, the hand held at neck height for the dawn rite, chest height at noon, navel height at dusk, invisible to anyone watching. Tradition names 108 as the full count, with 54 or a minimum of 28 where time is short. What happens, turn after turn, is less a request answered than an instrument tuned. The same handful of syllables, repeated enough times, stops feeling like something recited and starts to feel like something the mind does on its own.",
       gestures: ["gayatri-japa-mudra-sumukham", "japa-ganana-mudra"],
       citation: doubleVerified(36, 21),
+      repeatable: { presets: [10, 28, 108], default: 10 },
     },
   ],
 };

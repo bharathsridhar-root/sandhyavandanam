@@ -30,6 +30,16 @@ export interface MantraEntry {
   /** Optional ids into the gesture catalog (gestures.ts). */
   gestures?: string[];
   citation: string;
+  /**
+   * Present only for mantras recited multiple times in sequence (e.g.
+   * Gāyatrī japa) — lets Guided pace mode count repetitions down rather
+   * than reading the text once and stopping.
+   */
+  repeatable?: {
+    /** Selectable repetition counts, e.g. the standard 10 / 28 / 108. */
+    presets: number[];
+    default: number;
+  };
 }
 
 export interface RitualStep {
